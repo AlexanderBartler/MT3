@@ -1,0 +1,72 @@
+
+# Global Parameter
+parallel_calls = -1 # -1: AUTOTUNE
+ds_name_train = 'cifar10'
+ds_name_eval = 'cifar10'
+ds_name_test = 'cifar10'
+tfds_path = '~/tensorflow_datasets'
+
+# Input Pipeline for byol training
+gen_pipeline_train_byol.ds_name = %ds_name_train
+gen_pipeline_train_byol.tfds_path = %tfds_path
+gen_pipeline_train_byol.size_batch = 128
+gen_pipeline_train_byol.b_shuffle = True
+gen_pipeline_train_byol.dataset_cache = True
+gen_pipeline_train_byol.size_buffer_cpu = 2
+gen_pipeline_train_byol.shuffle_buffer_size = 50000
+gen_pipeline_train_byol.num_parallel_calls = %parallel_calls
+gen_pipeline_train_byol.augmentation_type = 'simclr'
+gen_pipeline_train_byol.batch_aug = True
+
+# Batch specific augmentation
+batch_augmentation.flip_ud_rate = 0.5
+batch_augmentation.flip_rl_rate = 0.5
+batch_augmentation.blur_rate = 0.2
+
+# Input pipleline for eval byol
+gen_pipeline_eval_byol.ds_name = %ds_name_eval
+gen_pipeline_eval_byol.tfds_path = %tfds_path
+gen_pipeline_eval_byol.dataset_cache = True
+gen_pipeline_eval_byol.size_batch = 100
+gen_pipeline_eval_byol.size_buffer_cpu = 5
+gen_pipeline_eval_byol.num_parallel_calls = %parallel_calls
+
+
+# Input pipeline for test byol
+gen_pipeline_test_byol.ds_name = %ds_name_test
+gen_pipeline_test_byol.tfds_path = %tfds_path
+gen_pipeline_test_byol.dataset_cache = True
+gen_pipeline_test_byol.size_batch = 100
+gen_pipeline_test_byol.size_buffer_cpu = 5
+gen_pipeline_test_byol.num_parallel_calls = %parallel_calls
+
+
+# Define model
+gen_model.Architecture = @BYOLResnetCifar10v2
+gen_model.num_layers = 26
+gen_model.num_initial_filters = 32
+gen_model.shortcut_connection = True
+gen_model.weight_decay = 1e-3
+gen_model.batch_norm_momentum = 0.9
+gen_model.batch_norm_epsilon = 1e-3
+gen_model.batch_norm_center = True
+gen_model.batch_norm_scale = True
+gen_model.group_norm_groups = 16
+gen_model.use_mlp_norm = False
+gen_model.proj_hidden_size = 256
+gen_model.proj_size = 128
+
+
+# Training parameter for byol
+train_and_eval_byol.n_epochs = 200
+train_and_eval_byol.save_period = 5
+train_and_eval_byol.lr_base = 0.1
+train_and_eval_byol.lr_momentum = 0.9
+train_and_eval_byol.beta_base = 0.996
+train_and_eval_byol.gamma_byol = 0.1
+train_and_eval_byol.lr_drop_boundaries = [75,125]
+train_and_eval_byol.lr_factors = [1.0,1.0,1.0]
+
+
+
+

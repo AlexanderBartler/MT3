@@ -1,0 +1,97 @@
+{
+    "cifar10": {
+        "accuracy": "0.9099",
+        "precision": "0.9112604",
+        "recall": "0.9088"
+    },
+    "cifar10_corrupted/brightness_5": {
+        "accuracy": "0.861",
+        "precision": "0.86415285",
+        "recall": "0.8594"
+    },
+    "cifar10_corrupted/contrast_5": {
+        "accuracy": "0.4992",
+        "precision": "0.50722855",
+        "recall": "0.4947"
+    },
+    "cifar10_corrupted/defocus_blur_5": {
+        "accuracy": "0.6483",
+        "precision": "0.65311706",
+        "recall": "0.6443"
+    },
+    "cifar10_corrupted/elastic_5": {
+        "accuracy": "0.7406",
+        "precision": "0.74562556",
+        "recall": "0.7372"
+    },
+    "cifar10_corrupted/fog_5": {
+        "accuracy": "0.7093",
+        "precision": "0.71382344",
+        "recall": "0.7059"
+    },
+    "cifar10_corrupted/frost_5": {
+        "accuracy": "0.6442",
+        "precision": "0.6505731",
+        "recall": "0.6414"
+    },
+    "cifar10_corrupted/frosted_glass_blur_5": {
+        "accuracy": "0.5272",
+        "precision": "0.5343558",
+        "recall": "0.5226"
+    },
+    "cifar10_corrupted/gaussian_blur_5": {
+        "accuracy": "0.4874",
+        "precision": "0.49093688",
+        "recall": "0.4821"
+    },
+    "cifar10_corrupted/impulse_noise_5": {
+        "accuracy": "0.465",
+        "precision": "0.4701926",
+        "recall": "0.4614"
+    },
+    "cifar10_corrupted/jpeg_compression_5": {
+        "accuracy": "0.7602",
+        "precision": "0.76490164",
+        "recall": "0.7584"
+    },
+    "cifar10_corrupted/motion_blur_5": {
+        "accuracy": "0.71",
+        "precision": "0.7135932",
+        "recall": "0.7066"
+    },
+    "cifar10_corrupted/pixelate_5": {
+        "accuracy": "0.6105",
+        "precision": "0.6171121",
+        "recall": "0.6073"
+    },
+    "cifar10_corrupted/saturate_5": {
+        "accuracy": "0.8678",
+        "precision": "0.8708606",
+        "recall": "0.8652"
+    },
+    "cifar10_corrupted/shot_noise_5": {
+        "accuracy": "0.5458",
+        "precision": "0.5521024",
+        "recall": "0.5436"
+    },
+    "cifar10_corrupted/snow_5": {
+        "accuracy": "0.7484",
+        "precision": "0.75348413",
+        "recall": "0.7461"
+    },
+    "cifar10_corrupted/spatter_5": {
+        "accuracy": "0.8146",
+        "precision": "0.81778806",
+        "recall": "0.8119"
+    },
+    "cifar10_corrupted/speckle_noise_5": {
+        "accuracy": "0.5415",
+        "precision": "0.5463038",
+        "recall": "0.538"
+    },
+    "cifar10_corrupted/zoom_blur_5": {
+        "accuracy": "0.6496",
+        "precision": "0.6566785",
+        "recall": "0.6465"
+    }
+}

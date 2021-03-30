@@ -1,0 +1,11 @@
+# Input pipeline for test baseline
+gen_pipeline_test_meta.tfds_path = %tfds_path
+gen_pipeline_test_meta.augmentation_type = 'simclr'
+gen_pipeline_test_meta.dataset_cache = True
+gen_pipeline_test_meta.size_batch = 32
+gen_pipeline_test_meta.size_buffer_cpu = 5
+gen_pipeline_test_meta.num_parallel_calls = %parallel_calls
+
+# Test time parameters
+test_meta.test_lr = 0.01
+test_meta.num_test_steps = 1

@@ -1,0 +1,538 @@
+Setup input pipeline...
+Load dataset info from /data/public/tensorflow_datasets/cifar10/3.0.2
+Field info.splits from disk and from code do not match. Keeping the one from code.
+Field info.module_name from disk and from code do not match. Keeping the one from code.
+Reusing dataset cifar10 (/data/public/tensorflow_datasets/cifar10/3.0.2)
+Constructing tf.data.Dataset for split train, from /data/public/tensorflow_datasets/cifar10/3.0.2
+Load dataset info from /data/public/tensorflow_datasets/cifar10/3.0.2
+Field info.splits from disk and from code do not match. Keeping the one from code.
+Field info.module_name from disk and from code do not match. Keeping the one from code.
+Reusing dataset cifar10 (/data/public/tensorflow_datasets/cifar10/3.0.2)
+Constructing tf.data.Dataset for split test, from /data/public/tensorflow_datasets/cifar10/3.0.2
+Setup model...
+Init M3T trainer...
+Building models...
+Setup optimizer...
+saving train log to /no_backups/m134/gitrepos/experiments/models_final/2021-02-14-05-01-30-007/logs/train
+Start M3T trainer...
+Initializing from scratch.
+Epoch 1/200: starting training,  ETA: 0.0 minutes.
+Entity <bound method M3TTrainer.flatten of <model.train_meta_obj.M3TTrainer object at 0x7fb3bc05d910>> appears to be a generator function. It will not be converted by AutoGraph.
+Entity <bound method M3TTrainer.flatten of <model.train_meta_obj.M3TTrainer object at 0x7fb3bc05d910>> appears to be a generator function. It will not be converted by AutoGraph.
+Saving checkpoint to /no_backups/m134/gitrepos/experiments/models_final/2021-02-14-05-01-30-007/ckpts.
+Epoch 1/200: loss: 2.030376434326172, ce_loss: 2.0179200172424316, byol_loss: 0.1245894655585289, metrics_train: {'pre_update_accuracy': 0.21350832, 'updated_accuracy': 0.23919654}, metrics_eval: {'accuracy': 0.2837, 'precision': 0.47600445, 'recall': 0.0853}
+Fetched config parameters: # Macros:
+# ==============================================================================
+ds_name_train = 'cifar10'
+parallel_calls = -1
+tfds_path = '/data/public/tensorflow_datasets'
+
+# Parameters for batch_augmentation:
+# ==============================================================================
+batch_augmentation.blur_rate = 0.2
+batch_augmentation.flip_rl_rate = 0.5
+batch_augmentation.flip_ud_rate = 0.5
+
+# Parameters for BYOLResnetCifar10v2:
+# ==============================================================================
+# None.
+
+# Parameters for gen_model:
+# ==============================================================================
+gen_model.Architecture = @BYOLResnetCifar10v2
+gen_model.batch_norm_center = True
+gen_model.batch_norm_epsilon = 0.001
+gen_model.batch_norm_momentum = 0.9
+gen_model.batch_norm_scale = True
+gen_model.group_norm_groups = 16
+gen_model.num_initial_filters = 32
+gen_model.num_layers = 26
+gen_model.proj_hidden_size = 256
+gen_model.proj_size = 128
+gen_model.shortcut_connection = True
+gen_model.use_mlp_norm = False
+gen_model.weight_decay = 1.5e-06
+
+# Parameters for gen_pipeline_eval_meta:
+# ==============================================================================
+gen_pipeline_eval_meta.dataset_cache = True
+gen_pipeline_eval_meta.ds_name = %ds_name_train
+gen_pipeline_eval_meta.num_parallel_calls = %parallel_calls
+gen_pipeline_eval_meta.size_batch = 100
+gen_pipeline_eval_meta.size_buffer_cpu = 5
+gen_pipeline_eval_meta.tfds_path = %tfds_path
+
+# Parameters for gen_pipeline_train_meta:
+# ==============================================================================
+gen_pipeline_train_meta.augmentation_type = 'simclr'
+gen_pipeline_train_meta.b_shuffle = True
+gen_pipeline_train_meta.dataset_cache = True
+gen_pipeline_train_meta.ds_name = %ds_name_train
+gen_pipeline_train_meta.image_repetition = False
+gen_pipeline_train_meta.inner_batch_size = 8
+gen_pipeline_train_meta.num_parallel_calls = %parallel_calls
+gen_pipeline_train_meta.outer_batch_size = 4
+gen_pipeline_train_meta.shuffle_buffer_size = 50000
+gen_pipeline_train_meta.size_buffer_cpu = 2
+gen_pipeline_train_meta.tfds_path = %tfds_path
+gen_pipeline_train_meta.use_batch_aug = True
+
+# Parameters for gen_run_folder:
+# ==============================================================================
+gen_run_folder.target = 'models_final'
+
+# Parameters for M3TTrainer:
+# ==============================================================================
+M3TTrainer.beta_byol = 0.1
+M3TTrainer.clipping_norm = 10.0
+M3TTrainer.debug = False
+M3TTrainer.inner_lr = 0.1
+M3TTrainer.keep_ckp = None
+M3TTrainer.lr_drop_boundaries = [1, 120, 150]
+M3TTrainer.lr_factors = [0.1, 1.0, 0.1, 0.01]
+M3TTrainer.meta_epochs = 200
+M3TTrainer.meta_lr = 0.01
+M3TTrainer.num_inner_steps = 1
+M3TTrainer.save_period = 5
+M3TTrainer.use_inner_clipping = True
+M3TTrainer.use_lr_drop = False
+M3TTrainer.use_outer_clipping = True
+.
+Epoch 2/200: starting training,  ETA: 2774.7 minutes.
+Epoch 2/200: loss: 1.687508463859558, ce_loss: 1.6776244640350342, byol_loss: 0.09882903099060059, metrics_train: {'pre_update_accuracy': 0.3363276, 'updated_accuracy': 0.3805818}, metrics_eval: {'accuracy': 0.3664, 'precision': 0.5508982, 'recall': 0.1932}
+Epoch 3/200: starting training,  ETA: 2454.6 minutes.
+Epoch 3/200: loss: 1.4930715560913086, ce_loss: 1.4861195087432861, byol_loss: 0.06951010227203369, metrics_train: {'pre_update_accuracy': 0.38460308, 'updated_accuracy': 0.4583667}, metrics_eval: {'accuracy': 0.3164, 'precision': 0.35072428, 'recall': 0.2736}
+Epoch 4/200: starting training,  ETA: 2346.0 minutes.
+Epoch 4/200: loss: 1.3467192649841309, ce_loss: 1.340099573135376, byol_loss: 0.06618383526802063, metrics_train: {'pre_update_accuracy': 0.43445903, 'updated_accuracy': 0.5103833}, metrics_eval: {'accuracy': 0.4409, 'precision': 0.5175218, 'recall': 0.35}
+Epoch 5/200: starting training,  ETA: 2284.1 minutes.
+Epoch 5/200: loss: 1.2164791822433472, ce_loss: 1.2113529443740845, byol_loss: 0.05127004534006119, metrics_train: {'pre_update_accuracy': 0.47431177, 'updated_accuracy': 0.56111956}, metrics_eval: {'accuracy': 0.3731, 'precision': 0.4033202, 'recall': 0.3377}
+Epoch 6/200: starting training,  ETA: 2237.0 minutes.
+Saving checkpoint to /no_backups/m134/gitrepos/experiments/models_final/2021-02-14-05-01-30-007/ckpts.
+Epoch 6/200: loss: 1.1238232851028442, ce_loss: 1.118303894996643, byol_loss: 0.055191073566675186, metrics_train: {'pre_update_accuracy': 0.5168454, 'updated_accuracy': 0.5973912}, metrics_eval: {'accuracy': 0.6132, 'precision': 0.70923877, 'recall': 0.532}
+Epoch 7/200: starting training,  ETA: 2206.1 minutes.
+Epoch 7/200: loss: 1.0475939512252808, ce_loss: 1.0423728227615356, byol_loss: 0.052211593836545944, metrics_train: {'pre_update_accuracy': 0.5349912, 'updated_accuracy': 0.6261203}, metrics_eval: {'accuracy': 0.3744, 'precision': 0.4081761, 'recall': 0.3245}
+Epoch 8/200: starting training,  ETA: 2181.2 minutes.
+Epoch 8/200: loss: 0.9945283532142639, ce_loss: 0.9891554117202759, byol_loss: 0.05371960625052452, metrics_train: {'pre_update_accuracy': 0.5383723, 'updated_accuracy': 0.64670694}, metrics_eval: {'accuracy': 0.6382, 'precision': 0.7169235, 'recall': 0.563}
+Epoch 9/200: starting training,  ETA: 2158.0 minutes.
+Epoch 9/200: loss: 0.9471302032470703, ce_loss: 0.9418984651565552, byol_loss: 0.05232119932770729, metrics_train: {'pre_update_accuracy': 0.5794254, 'updated_accuracy': 0.6635724}, metrics_eval: {'accuracy': 0.5721, 'precision': 0.6281031, 'recall': 0.5288}
+Epoch 10/200: starting training,  ETA: 2137.0 minutes.
+Epoch 10/200: loss: 0.9078273177146912, ce_loss: 0.9025473594665527, byol_loss: 0.05279196798801422, metrics_train: {'pre_update_accuracy': 0.5782651, 'updated_accuracy': 0.67955744}, metrics_eval: {'accuracy': 0.5359, 'precision': 0.6097653, 'recall': 0.4858}
+Epoch 11/200: starting training,  ETA: 2117.5 minutes.
+Saving checkpoint to /no_backups/m134/gitrepos/experiments/models_final/2021-02-14-05-01-30-007/ckpts.
+Epoch 11/200: loss: 0.8586888313293457, ce_loss: 0.8526462912559509, byol_loss: 0.06040684133768082, metrics_train: {'pre_update_accuracy': 0.5993918, 'updated_accuracy': 0.6978433}, metrics_eval: {'accuracy': 0.6751, 'precision': 0.7552396, 'recall': 0.6162}
+Epoch 12/200: starting training,  ETA: 2099.7 minutes.
+Epoch 12/200: loss: 0.8180614709854126, ce_loss: 0.8104681968688965, byol_loss: 0.07592680305242538, metrics_train: {'pre_update_accuracy': 0.6193782, 'updated_accuracy': 0.7121879}, metrics_eval: {'accuracy': 0.5312, 'precision': 0.5730847, 'recall': 0.4795}
+Epoch 13/200: starting training,  ETA: 2083.1 minutes.
+Epoch 13/200: loss: 0.7826995849609375, ce_loss: 0.7747851014137268, byol_loss: 0.0791422575712204, metrics_train: {'pre_update_accuracy': 0.6320422, 'updated_accuracy': 0.72415173}, metrics_eval: {'accuracy': 0.6868, 'precision': 0.7594481, 'recall': 0.633}
+Epoch 14/200: starting training,  ETA: 2066.5 minutes.
+Epoch 14/200: loss: 0.7504659295082092, ce_loss: 0.7424373626708984, byol_loss: 0.08027983456850052, metrics_train: {'pre_update_accuracy': 0.65715027, 'updated_accuracy': 0.737536}, metrics_eval: {'accuracy': 0.5774, 'precision': 0.6454667, 'recall': 0.5318}
+Epoch 15/200: starting training,  ETA: 2051.9 minutes.
+Epoch 15/200: loss: 0.71720951795578, ce_loss: 0.7095702886581421, byol_loss: 0.07640072703361511, metrics_train: {'pre_update_accuracy': 0.6735355, 'updated_accuracy': 0.75074023}, metrics_eval: {'accuracy': 0.7075, 'precision': 0.7639931, 'recall': 0.662}
+Epoch 16/200: starting training,  ETA: 2037.5 minutes.
+Saving checkpoint to /no_backups/m134/gitrepos/experiments/models_final/2021-02-14-05-01-30-007/ckpts.
+Epoch 16/200: loss: 0.6912636756896973, ce_loss: 0.6833664774894714, byol_loss: 0.07897516340017319, metrics_train: {'pre_update_accuracy': 0.6734155, 'updated_accuracy': 0.7583827}, metrics_eval: {'accuracy': 0.7537, 'precision': 0.81174713, 'recall': 0.7076}
+Epoch 17/200: starting training,  ETA: 2024.4 minutes.
+Epoch 17/200: loss: 0.6628084778785706, ce_loss: 0.6545335650444031, byol_loss: 0.08275245875120163, metrics_train: {'pre_update_accuracy': 0.68611956, 'updated_accuracy': 0.76958627}, metrics_eval: {'accuracy': 0.7475, 'precision': 0.79717934, 'recall': 0.7122}
+Epoch 18/200: starting training,  ETA: 2010.9 minutes.
+Epoch 18/200: loss: 0.6369985938072205, ce_loss: 0.6292114853858948, byol_loss: 0.07788030058145523, metrics_train: {'pre_update_accuracy': 0.6976032, 'updated_accuracy': 0.78006965}, metrics_eval: {'accuracy': 0.7035, 'precision': 0.749774, 'recall': 0.6634}
+Epoch 19/200: starting training,  ETA: 1998.3 minutes.
+Epoch 19/200: loss: 0.6175322532653809, ce_loss: 0.6101671457290649, byol_loss: 0.07365348935127258, metrics_train: {'pre_update_accuracy': 0.6955626, 'updated_accuracy': 0.78453106}, metrics_eval: {'accuracy': 0.6577, 'precision': 0.6968826, 'recall': 0.6304}
+Epoch 20/200: starting training,  ETA: 1985.3 minutes.
+Epoch 20/200: loss: 0.5967699885368347, ce_loss: 0.5896973013877869, byol_loss: 0.07072954624891281, metrics_train: {'pre_update_accuracy': 0.69756323, 'updated_accuracy': 0.79277366}, metrics_eval: {'accuracy': 0.71, 'precision': 0.7516553, 'recall': 0.6698}
+Epoch 21/200: starting training,  ETA: 1972.9 minutes.
+Saving checkpoint to /no_backups/m134/gitrepos/experiments/models_final/2021-02-14-05-01-30-007/ckpts.
+Epoch 21/200: loss: 0.5766987800598145, ce_loss: 0.5697253346443176, byol_loss: 0.06973355263471603, metrics_train: {'pre_update_accuracy': 0.7227713, 'updated_accuracy': 0.7986756}, metrics_eval: {'accuracy': 0.765, 'precision': 0.8117778, 'recall': 0.7306}
+Epoch 22/200: starting training,  ETA: 1960.2 minutes.
+Epoch 22/200: loss: 0.5507721304893494, ce_loss: 0.5438714027404785, byol_loss: 0.0690097063779831, metrics_train: {'pre_update_accuracy': 0.72897327, 'updated_accuracy': 0.8109995}, metrics_eval: {'accuracy': 0.7819, 'precision': 0.82562864, 'recall': 0.7519}
+Epoch 23/200: starting training,  ETA: 1947.2 minutes.
+Epoch 23/200: loss: 0.5365050435066223, ce_loss: 0.5295385718345642, byol_loss: 0.06966091692447662, metrics_train: {'pre_update_accuracy': 0.740737, 'updated_accuracy': 0.81534094}, metrics_eval: {'accuracy': 0.6903, 'precision': 0.7216416, 'recall': 0.6629}
+Epoch 24/200: starting training,  ETA: 1934.6 minutes.
+Epoch 24/200: loss: 0.5225082039833069, ce_loss: 0.5157309174537659, byol_loss: 0.0677708312869072, metrics_train: {'pre_update_accuracy': 0.74395806, 'updated_accuracy': 0.81732154}, metrics_eval: {'accuracy': 0.7467, 'precision': 0.7907489, 'recall': 0.718}
+Epoch 25/200: starting training,  ETA: 1922.1 minutes.
+Epoch 25/200: loss: 0.49860647320747375, ce_loss: 0.4920082688331604, byol_loss: 0.06597953289747238, metrics_train: {'pre_update_accuracy': 0.75788254, 'updated_accuracy': 0.8258443}, metrics_eval: {'accuracy': 0.7482, 'precision': 0.77737224, 'recall': 0.7242}
+Epoch 26/200: starting training,  ETA: 1910.0 minutes.
+Saving checkpoint to /no_backups/m134/gitrepos/experiments/models_final/2021-02-14-05-01-30-007/ckpts.
+Epoch 26/200: loss: 0.4951026439666748, ce_loss: 0.4898049533367157, byol_loss: 0.052977949380874634, metrics_train: {'pre_update_accuracy': 0.7550616, 'updated_accuracy': 0.8288452}, metrics_eval: {'accuracy': 0.7888, 'precision': 0.821796, 'recall': 0.7669}
+Epoch 27/200: starting training,  ETA: 1898.4 minutes.
+Epoch 27/200: loss: 0.476095587015152, ce_loss: 0.47044631838798523, byol_loss: 0.056486453860998154, metrics_train: {'pre_update_accuracy': 0.7617037, 'updated_accuracy': 0.8359475}, metrics_eval: {'accuracy': 0.7722, 'precision': 0.81069285, 'recall': 0.743}
+Epoch 28/200: starting training,  ETA: 1886.6 minutes.
+Epoch 28/200: loss: 0.45901036262512207, ce_loss: 0.4533800780773163, byol_loss: 0.056299448013305664, metrics_train: {'pre_update_accuracy': 0.7515405, 'updated_accuracy': 0.84144926}, metrics_eval: {'accuracy': 0.7847, 'precision': 0.8173979, 'recall': 0.7583}
+Epoch 29/200: starting training,  ETA: 1874.1 minutes.
+Epoch 29/200: loss: 0.45444273948669434, ce_loss: 0.4487641155719757, byol_loss: 0.05678795650601387, metrics_train: {'pre_update_accuracy': 0.7517005, 'updated_accuracy': 0.8429698}, metrics_eval: {'accuracy': 0.7356, 'precision': 0.77312654, 'recall': 0.7129}
+Epoch 30/200: starting training,  ETA: 1861.7 minutes.
+Epoch 30/200: loss: 0.44583332538604736, ce_loss: 0.439940869808197, byol_loss: 0.05892543867230415, metrics_train: {'pre_update_accuracy': 0.76206386, 'updated_accuracy': 0.8450304}, metrics_eval: {'accuracy': 0.8342, 'precision': 0.8621972, 'recall': 0.8115}
+Epoch 31/200: starting training,  ETA: 1849.0 minutes.
+Saving checkpoint to /no_backups/m134/gitrepos/experiments/models_final/2021-02-14-05-01-30-007/ckpts.
+Epoch 31/200: loss: 0.42538464069366455, ce_loss: 0.4199129641056061, byol_loss: 0.054717689752578735, metrics_train: {'pre_update_accuracy': 0.7586828, 'updated_accuracy': 0.8536932}, metrics_eval: {'accuracy': 0.7495, 'precision': 0.7821878, 'recall': 0.7272}
+Epoch 32/200: starting training,  ETA: 1837.2 minutes.
+Epoch 32/200: loss: 0.4194737672805786, ce_loss: 0.4128771126270294, byol_loss: 0.06597524136304855, metrics_train: {'pre_update_accuracy': 0.7744078, 'updated_accuracy': 0.8546535}, metrics_eval: {'accuracy': 0.7713, 'precision': 0.8034564, 'recall': 0.7485}
+Epoch 33/200: starting training,  ETA: 1825.2 minutes.
+Epoch 33/200: loss: 0.4145526587963104, ce_loss: 0.4085875153541565, byol_loss: 0.05965067446231842, metrics_train: {'pre_update_accuracy': 0.7795094, 'updated_accuracy': 0.85731435}, metrics_eval: {'accuracy': 0.7879, 'precision': 0.8168432, 'recall': 0.7711}
+Epoch 34/200: starting training,  ETA: 1813.9 minutes.
+Epoch 34/200: loss: 0.39382243156433105, ce_loss: 0.3874148428440094, byol_loss: 0.06407484412193298, metrics_train: {'pre_update_accuracy': 0.77734876, 'updated_accuracy': 0.8637964}, metrics_eval: {'accuracy': 0.7742, 'precision': 0.80359626, 'recall': 0.7508}
+Epoch 35/200: starting training,  ETA: 1802.3 minutes.
+Epoch 35/200: loss: 0.3885479271411896, ce_loss: 0.3817567229270935, byol_loss: 0.06791393458843231, metrics_train: {'pre_update_accuracy': 0.7984355, 'updated_accuracy': 0.8653569}, metrics_eval: {'accuracy': 0.8409, 'precision': 0.86975014, 'recall': 0.818}
+Epoch 36/200: starting training,  ETA: 1790.9 minutes.
+Saving checkpoint to /no_backups/m134/gitrepos/experiments/models_final/2021-02-14-05-01-30-007/ckpts.
+Epoch 36/200: loss: 0.3808497190475464, ce_loss: 0.37364429235458374, byol_loss: 0.07205411791801453, metrics_train: {'pre_update_accuracy': 0.80513763, 'updated_accuracy': 0.8690381}, metrics_eval: {'accuracy': 0.6117, 'precision': 0.63489515, 'recall': 0.5935}
+Epoch 37/200: starting training,  ETA: 1779.3 minutes.
+Epoch 37/200: loss: 0.3687152564525604, ce_loss: 0.36179590225219727, byol_loss: 0.06919704377651215, metrics_train: {'pre_update_accuracy': 0.8140805, 'updated_accuracy': 0.8737196}, metrics_eval: {'accuracy': 0.7807, 'precision': 0.81439066, 'recall': 0.7538}
+Epoch 38/200: starting training,  ETA: 1767.7 minutes.
+Epoch 38/200: loss: 0.361468642950058, ce_loss: 0.35541510581970215, byol_loss: 0.060539696365594864, metrics_train: {'pre_update_accuracy': 0.8107995, 'updated_accuracy': 0.8746799}, metrics_eval: {'accuracy': 0.7272, 'precision': 0.74597365, 'recall': 0.7133}
+Epoch 39/200: starting training,  ETA: 1755.7 minutes.
+Epoch 39/200: loss: 0.35732153058052063, ce_loss: 0.35156819224357605, byol_loss: 0.057534363120794296, metrics_train: {'pre_update_accuracy': 0.8185619, 'updated_accuracy': 0.87610036}, metrics_eval: {'accuracy': 0.8134, 'precision': 0.8352916, 'recall': 0.7962}
+Epoch 40/200: starting training,  ETA: 1743.9 minutes.
+Epoch 40/200: loss: 0.3429165780544281, ce_loss: 0.33771631121635437, byol_loss: 0.05200262367725372, metrics_train: {'pre_update_accuracy': 0.8087988, 'updated_accuracy': 0.88230234}, metrics_eval: {'accuracy': 0.7255, 'precision': 0.7619202, 'recall': 0.7031}
+Epoch 41/200: starting training,  ETA: 1732.1 minutes.
+Saving checkpoint to /no_backups/m134/gitrepos/experiments/models_final/2021-02-14-05-01-30-007/ckpts.
+Epoch 41/200: loss: 0.3407039940357208, ce_loss: 0.3353132903575897, byol_loss: 0.0539105087518692, metrics_train: {'pre_update_accuracy': 0.8071783, 'updated_accuracy': 0.8826224}, metrics_eval: {'accuracy': 0.8148, 'precision': 0.8369815, 'recall': 0.803}
+Epoch 42/200: starting training,  ETA: 1720.4 minutes.
+Epoch 42/200: loss: 0.3335484564304352, ce_loss: 0.32819804549217224, byol_loss: 0.053503572940826416, metrics_train: {'pre_update_accuracy': 0.8165413, 'updated_accuracy': 0.8850432}, metrics_eval: {'accuracy': 0.7719, 'precision': 0.7873682, 'recall': 0.7617}
+Epoch 43/200: starting training,  ETA: 1708.6 minutes.
+Epoch 43/200: loss: 0.3242267072200775, ce_loss: 0.3184863030910492, byol_loss: 0.0574059821665287, metrics_train: {'pre_update_accuracy': 0.8202825, 'updated_accuracy': 0.887504}, metrics_eval: {'accuracy': 0.8256, 'precision': 0.85373324, 'recall': 0.8084}
+Epoch 44/200: starting training,  ETA: 1696.9 minutes.
+Epoch 44/200: loss: 0.3198108971118927, ce_loss: 0.3141261339187622, byol_loss: 0.05684761330485344, metrics_train: {'pre_update_accuracy': 0.8369678, 'updated_accuracy': 0.8896647}, metrics_eval: {'accuracy': 0.8376, 'precision': 0.85872287, 'recall': 0.823}
+Epoch 45/200: starting training,  ETA: 1685.4 minutes.
+Epoch 45/200: loss: 0.30704358220100403, ce_loss: 0.3012056350708008, byol_loss: 0.05837632715702057, metrics_train: {'pre_update_accuracy': 0.8211428, 'updated_accuracy': 0.89422613}, metrics_eval: {'accuracy': 0.8391, 'precision': 0.8619571, 'recall': 0.8236}
+Epoch 46/200: starting training,  ETA: 1673.6 minutes.
+Saving checkpoint to /no_backups/m134/gitrepos/experiments/models_final/2021-02-14-05-01-30-007/ckpts.
+Epoch 46/200: loss: 0.30277472734451294, ce_loss: 0.29676803946495056, byol_loss: 0.06006515026092529, metrics_train: {'pre_update_accuracy': 0.8300656, 'updated_accuracy': 0.8943662}, metrics_eval: {'accuracy': 0.7666, 'precision': 0.79494864, 'recall': 0.7428}
+Epoch 47/200: starting training,  ETA: 1662.2 minutes.
+Epoch 47/200: loss: 0.2989281117916107, ce_loss: 0.2926636040210724, byol_loss: 0.06264504790306091, metrics_train: {'pre_update_accuracy': 0.8322063, 'updated_accuracy': 0.8951865}, metrics_eval: {'accuracy': 0.8349, 'precision': 0.85492605, 'recall': 0.8209}
+Epoch 48/200: starting training,  ETA: 1650.8 minutes.
+Epoch 48/200: loss: 0.2924692630767822, ce_loss: 0.286145955324173, byol_loss: 0.06323227286338806, metrics_train: {'pre_update_accuracy': 0.83110595, 'updated_accuracy': 0.8987476}, metrics_eval: {'accuracy': 0.744, 'precision': 0.7728482, 'recall': 0.7264}
+Epoch 49/200: starting training,  ETA: 1639.3 minutes.
+Epoch 49/200: loss: 0.2910914421081543, ce_loss: 0.28506478667259216, byol_loss: 0.06026538833975792, metrics_train: {'pre_update_accuracy': 0.83606756, 'updated_accuracy': 0.90044814}, metrics_eval: {'accuracy': 0.8173, 'precision': 0.8357032, 'recall': 0.8052}
+Epoch 50/200: starting training,  ETA: 1628.0 minutes.
+Epoch 50/200: loss: 0.28052276372909546, ce_loss: 0.2743103504180908, byol_loss: 0.062125612050294876, metrics_train: {'pre_update_accuracy': 0.83698785, 'updated_accuracy': 0.90322906}, metrics_eval: {'accuracy': 0.7907, 'precision': 0.809901, 'recall': 0.7771}
+Epoch 51/200: starting training,  ETA: 1616.6 minutes.
+Saving checkpoint to /no_backups/m134/gitrepos/experiments/models_final/2021-02-14-05-01-30-007/ckpts.
+Epoch 51/200: loss: 0.2756492495536804, ce_loss: 0.2694956064224243, byol_loss: 0.061537012457847595, metrics_train: {'pre_update_accuracy': 0.84236956, 'updated_accuracy': 0.90486956}, metrics_eval: {'accuracy': 0.8615, 'precision': 0.8796805, 'recall': 0.8481}
+Epoch 52/200: starting training,  ETA: 1605.1 minutes.
+Epoch 52/200: loss: 0.27427953481674194, ce_loss: 0.26795899868011475, byol_loss: 0.06320719420909882, metrics_train: {'pre_update_accuracy': 0.86225593, 'updated_accuracy': 0.90554976}, metrics_eval: {'accuracy': 0.8488, 'precision': 0.863876, 'recall': 0.8358}
+Epoch 53/200: starting training,  ETA: 1593.8 minutes.
+Epoch 53/200: loss: 0.2705918550491333, ce_loss: 0.26400262117385864, byol_loss: 0.06589337438344955, metrics_train: {'pre_update_accuracy': 0.8492718, 'updated_accuracy': 0.90735036}, metrics_eval: {'accuracy': 0.8319, 'precision': 0.85108596, 'recall': 0.819}
+Epoch 54/200: starting training,  ETA: 1582.6 minutes.
+Epoch 54/200: loss: 0.2606610059738159, ce_loss: 0.2540540099143982, byol_loss: 0.0660715103149414, metrics_train: {'pre_update_accuracy': 0.8543934, 'updated_accuracy': 0.91011125}, metrics_eval: {'accuracy': 0.8435, 'precision': 0.8633521, 'recall': 0.8283}
+Epoch 55/200: starting training,  ETA: 1571.2 minutes.
+Epoch 55/200: loss: 0.26072224974632263, ce_loss: 0.25406181812286377, byol_loss: 0.06660638004541397, metrics_train: {'pre_update_accuracy': 0.8509723, 'updated_accuracy': 0.9103313}, metrics_eval: {'accuracy': 0.8307, 'precision': 0.84597915, 'recall': 0.8195}
+Epoch 56/200: starting training,  ETA: 1559.7 minutes.
+Saving checkpoint to /no_backups/m134/gitrepos/experiments/models_final/2021-02-14-05-01-30-007/ckpts.
+Epoch 56/200: loss: 0.2542556822299957, ce_loss: 0.24734221398830414, byol_loss: 0.06913428008556366, metrics_train: {'pre_update_accuracy': 0.8493718, 'updated_accuracy': 0.9129521}, metrics_eval: {'accuracy': 0.8155, 'precision': 0.83135146, 'recall': 0.804}
+Epoch 57/200: starting training,  ETA: 1548.6 minutes.
+Epoch 57/200: loss: 0.2537757456302643, ce_loss: 0.2467653900384903, byol_loss: 0.07010173052549362, metrics_train: {'pre_update_accuracy': 0.8583547, 'updated_accuracy': 0.91269207}, metrics_eval: {'accuracy': 0.856, 'precision': 0.8726181, 'recall': 0.8426}
+Epoch 58/200: starting training,  ETA: 1537.8 minutes.
+Epoch 58/200: loss: 0.24064195156097412, ce_loss: 0.23360328376293182, byol_loss: 0.07038453221321106, metrics_train: {'pre_update_accuracy': 0.8621359, 'updated_accuracy': 0.9178137}, metrics_eval: {'accuracy': 0.8384, 'precision': 0.8574406, 'recall': 0.8228}
+Epoch 59/200: starting training,  ETA: 1527.0 minutes.
+Epoch 59/200: loss: 0.2447969913482666, ce_loss: 0.23697872459888458, byol_loss: 0.0781807228922844, metrics_train: {'pre_update_accuracy': 0.85945505, 'updated_accuracy': 0.9163332}, metrics_eval: {'accuracy': 0.799, 'precision': 0.82154423, 'recall': 0.7863}
+Epoch 60/200: starting training,  ETA: 1516.2 minutes.
+Epoch 60/200: loss: 0.23644591867923737, ce_loss: 0.22883078455924988, byol_loss: 0.07615067809820175, metrics_train: {'pre_update_accuracy': 0.8584947, 'updated_accuracy': 0.91971433}, metrics_eval: {'accuracy': 0.8595, 'precision': 0.8725218, 'recall': 0.8494}
+Epoch 61/200: starting training,  ETA: 1505.3 minutes.
+Saving checkpoint to /no_backups/m134/gitrepos/experiments/models_final/2021-02-14-05-01-30-007/ckpts.
+Epoch 61/200: loss: 0.2315332144498825, ce_loss: 0.22355470061302185, byol_loss: 0.07978201657533646, metrics_train: {'pre_update_accuracy': 0.8618358, 'updated_accuracy': 0.9208947}, metrics_eval: {'accuracy': 0.8529, 'precision': 0.8691386, 'recall': 0.8415}
+Epoch 62/200: starting training,  ETA: 1494.4 minutes.
+Epoch 62/200: loss: 0.22705167531967163, ce_loss: 0.21884143352508545, byol_loss: 0.08210274577140808, metrics_train: {'pre_update_accuracy': 0.8580946, 'updated_accuracy': 0.92325544}, metrics_eval: {'accuracy': 0.7335, 'precision': 0.7426433, 'recall': 0.7243}
+Epoch 63/200: starting training,  ETA: 1483.7 minutes.
+Epoch 63/200: loss: 0.2280748039484024, ce_loss: 0.21966011822223663, byol_loss: 0.08414745330810547, metrics_train: {'pre_update_accuracy': 0.8674976, 'updated_accuracy': 0.9226552}, metrics_eval: {'accuracy': 0.8219, 'precision': 0.8398964, 'recall': 0.8105}
+Epoch 64/200: starting training,  ETA: 1472.9 minutes.
+Epoch 64/200: loss: 0.221636563539505, ce_loss: 0.21309033036231995, byol_loss: 0.08546248823404312, metrics_train: {'pre_update_accuracy': 0.8703985, 'updated_accuracy': 0.9245359}, metrics_eval: {'accuracy': 0.8373, 'precision': 0.85729134, 'recall': 0.8248}
+Epoch 65/200: starting training,  ETA: 1461.9 minutes.
+Epoch 65/200: loss: 0.222220316529274, ce_loss: 0.2137291133403778, byol_loss: 0.08491411805152893, metrics_train: {'pre_update_accuracy': 0.8578545, 'updated_accuracy': 0.9241557}, metrics_eval: {'accuracy': 0.843, 'precision': 0.85748196, 'recall': 0.8309}
+Epoch 66/200: starting training,  ETA: 1450.9 minutes.
+Saving checkpoint to /no_backups/m134/gitrepos/experiments/models_final/2021-02-14-05-01-30-007/ckpts.
+Epoch 66/200: loss: 0.22005152702331543, ce_loss: 0.2120683491230011, byol_loss: 0.0798313170671463, metrics_train: {'pre_update_accuracy': 0.86643726, 'updated_accuracy': 0.92331547}, metrics_eval: {'accuracy': 0.8437, 'precision': 0.8579078, 'recall': 0.8332}
+Epoch 67/200: starting training,  ETA: 1439.8 minutes.
+Epoch 67/200: loss: 0.21888960897922516, ce_loss: 0.21008242666721344, byol_loss: 0.0880722850561142, metrics_train: {'pre_update_accuracy': 0.85887486, 'updated_accuracy': 0.924996}, metrics_eval: {'accuracy': 0.8625, 'precision': 0.87437236, 'recall': 0.8533}
+Epoch 68/200: starting training,  ETA: 1428.3 minutes.
+Epoch 68/200: loss: 0.21748459339141846, ce_loss: 0.20582400262355804, byol_loss: 0.11660483479499817, metrics_train: {'pre_update_accuracy': 0.88632363, 'updated_accuracy': 0.92641646}, metrics_eval: {'accuracy': 0.8476, 'precision': 0.86266446, 'recall': 0.8392}
+Epoch 69/200: starting training,  ETA: 1416.4 minutes.
+Epoch 69/200: loss: 0.2085644006729126, ce_loss: 0.1995535045862198, byol_loss: 0.09010764211416245, metrics_train: {'pre_update_accuracy': 0.91111153, 'updated_accuracy': 0.9293974}, metrics_eval: {'accuracy': 0.8696, 'precision': 0.8881743, 'recall': 0.8562}
+Epoch 70/200: starting training,  ETA: 1404.9 minutes.
+Epoch 70/200: loss: 0.20604468882083893, ce_loss: 0.19913198053836823, byol_loss: 0.06912809610366821, metrics_train: {'pre_update_accuracy': 0.9159931, 'updated_accuracy': 0.9293974}, metrics_eval: {'accuracy': 0.859, 'precision': 0.874291, 'recall': 0.8478}
+Epoch 71/200: starting training,  ETA: 1394.2 minutes.
+Saving checkpoint to /no_backups/m134/gitrepos/experiments/models_final/2021-02-14-05-01-30-007/ckpts.
+Epoch 71/200: loss: 0.20133909583091736, ce_loss: 0.19425944983959198, byol_loss: 0.07079523056745529, metrics_train: {'pre_update_accuracy': 0.9091109, 'updated_accuracy': 0.9310979}, metrics_eval: {'accuracy': 0.862, 'precision': 0.876893, 'recall': 0.8512}
+Epoch 72/200: starting training,  ETA: 1383.3 minutes.
+Epoch 72/200: loss: 0.19635167717933655, ce_loss: 0.18898068368434906, byol_loss: 0.07370802015066147, metrics_train: {'pre_update_accuracy': 0.91069144, 'updated_accuracy': 0.9337988}, metrics_eval: {'accuracy': 0.87, 'precision': 0.88459957, 'recall': 0.8593}
+Epoch 73/200: starting training,  ETA: 1372.3 minutes.
+Epoch 73/200: loss: 0.19558413326740265, ce_loss: 0.1898348033428192, byol_loss: 0.05749182030558586, metrics_train: {'pre_update_accuracy': 0.9043494, 'updated_accuracy': 0.93335867}, metrics_eval: {'accuracy': 0.8621, 'precision': 0.87432307, 'recall': 0.8557}
+Epoch 74/200: starting training,  ETA: 1361.3 minutes.
+Epoch 74/200: loss: 0.1855194866657257, ce_loss: 0.17982915043830872, byol_loss: 0.056901831179857254, metrics_train: {'pre_update_accuracy': 0.91147166, 'updated_accuracy': 0.93607956}, metrics_eval: {'accuracy': 0.8733, 'precision': 0.8880281, 'recall': 0.8597}
+Epoch 75/200: starting training,  ETA: 1350.6 minutes.
+Epoch 75/200: loss: 0.1861935406923294, ce_loss: 0.18135134875774384, byol_loss: 0.04842131584882736, metrics_train: {'pre_update_accuracy': 0.91059136, 'updated_accuracy': 0.9355594}, metrics_eval: {'accuracy': 0.8633, 'precision': 0.8752429, 'recall': 0.8559}
+Epoch 76/200: starting training,  ETA: 1339.8 minutes.
+Saving checkpoint to /no_backups/m134/gitrepos/experiments/models_final/2021-02-14-05-01-30-007/ckpts.
+Epoch 76/200: loss: 0.18606892228126526, ce_loss: 0.18046437203884125, byol_loss: 0.056047577410936356, metrics_train: {'pre_update_accuracy': 0.9064901, 'updated_accuracy': 0.93605953}, metrics_eval: {'accuracy': 0.8541, 'precision': 0.8672259, 'recall': 0.8478}
+Epoch 77/200: starting training,  ETA: 1328.9 minutes.
+Epoch 77/200: loss: 0.17871832847595215, ce_loss: 0.17356479167938232, byol_loss: 0.05153505504131317, metrics_train: {'pre_update_accuracy': 0.9152929, 'updated_accuracy': 0.93800014}, metrics_eval: {'accuracy': 0.8571, 'precision': 0.86905, 'recall': 0.8508}
+Epoch 78/200: starting training,  ETA: 1318.0 minutes.
+Epoch 78/200: loss: 0.1803700476884842, ce_loss: 0.17499136924743652, byol_loss: 0.05378862842917442, metrics_train: {'pre_update_accuracy': 0.90981114, 'updated_accuracy': 0.9371599}, metrics_eval: {'accuracy': 0.8624, 'precision': 0.8743734, 'recall': 0.8547}
+Epoch 79/200: starting training,  ETA: 1307.1 minutes.
+Epoch 79/200: loss: 0.1754244714975357, ce_loss: 0.16962626576423645, byol_loss: 0.05798184499144554, metrics_train: {'pre_update_accuracy': 0.9127121, 'updated_accuracy': 0.9390205}, metrics_eval: {'accuracy': 0.8575, 'precision': 0.87055445, 'recall': 0.8494}
+Epoch 80/200: starting training,  ETA: 1296.4 minutes.
+Epoch 80/200: loss: 0.17246627807617188, ce_loss: 0.16655923426151276, byol_loss: 0.059072766453027725, metrics_train: {'pre_update_accuracy': 0.90787053, 'updated_accuracy': 0.9412812}, metrics_eval: {'accuracy': 0.8684, 'precision': 0.8809499, 'recall': 0.8606}
+Epoch 81/200: starting training,  ETA: 1285.5 minutes.
+Saving checkpoint to /no_backups/m134/gitrepos/experiments/models_final/2021-02-14-05-01-30-007/ckpts.
+Epoch 81/200: loss: 0.16861006617546082, ce_loss: 0.16291587054729462, byol_loss: 0.056943606585264206, metrics_train: {'pre_update_accuracy': 0.91705346, 'updated_accuracy': 0.9409611}, metrics_eval: {'accuracy': 0.8519, 'precision': 0.8632181, 'recall': 0.8444}
+Epoch 82/200: starting training,  ETA: 1274.7 minutes.
+Epoch 82/200: loss: 0.16213874518871307, ce_loss: 0.15700304508209229, byol_loss: 0.05135725438594818, metrics_train: {'pre_update_accuracy': 0.9171335, 'updated_accuracy': 0.9449624}, metrics_eval: {'accuracy': 0.8633, 'precision': 0.87644356, 'recall': 0.8576}
+Epoch 83/200: starting training,  ETA: 1263.8 minutes.
+Epoch 83/200: loss: 0.16697390377521515, ce_loss: 0.1613830327987671, byol_loss: 0.05590882897377014, metrics_train: {'pre_update_accuracy': 0.9071103, 'updated_accuracy': 0.94290173}, metrics_eval: {'accuracy': 0.8393, 'precision': 0.85028654, 'recall': 0.8309}
+Epoch 84/200: starting training,  ETA: 1252.7 minutes.
+Epoch 84/200: loss: 0.15875960886478424, ce_loss: 0.15312208235263824, byol_loss: 0.05637552961707115, metrics_train: {'pre_update_accuracy': 0.8956266, 'updated_accuracy': 0.94640285}, metrics_eval: {'accuracy': 0.8313, 'precision': 0.8450791, 'recall': 0.8226}
+Epoch 85/200: starting training,  ETA: 1241.8 minutes.
+Epoch 85/200: loss: 0.16230621933937073, ce_loss: 0.15610617399215698, byol_loss: 0.06200074404478073, metrics_train: {'pre_update_accuracy': 0.9037492, 'updated_accuracy': 0.9434219}, metrics_eval: {'accuracy': 0.8695, 'precision': 0.88082105, 'recall': 0.8625}
+Epoch 86/200: starting training,  ETA: 1230.7 minutes.
+Saving checkpoint to /no_backups/m134/gitrepos/experiments/models_final/2021-02-14-05-01-30-007/ckpts.
+Epoch 86/200: loss: 0.15435725450515747, ce_loss: 0.14852535724639893, byol_loss: 0.05831926688551903, metrics_train: {'pre_update_accuracy': 0.925136, 'updated_accuracy': 0.9475032}, metrics_eval: {'accuracy': 0.8648, 'precision': 0.8743119, 'recall': 0.8577}
+Epoch 87/200: starting training,  ETA: 1219.6 minutes.
+Epoch 87/200: loss: 0.1522773653268814, ce_loss: 0.14644697308540344, byol_loss: 0.05830260366201401, metrics_train: {'pre_update_accuracy': 0.9252561, 'updated_accuracy': 0.94732314}, metrics_eval: {'accuracy': 0.8577, 'precision': 0.8668162, 'recall': 0.85}
+Epoch 88/200: starting training,  ETA: 1208.5 minutes.
+Epoch 88/200: loss: 0.15312792360782623, ce_loss: 0.1470634490251541, byol_loss: 0.06064387783408165, metrics_train: {'pre_update_accuracy': 0.91695344, 'updated_accuracy': 0.94736314}, metrics_eval: {'accuracy': 0.8258, 'precision': 0.8400082, 'recall': 0.818}
+Epoch 89/200: starting training,  ETA: 1197.4 minutes.
+Epoch 89/200: loss: 0.14814677834510803, ce_loss: 0.14167343080043793, byol_loss: 0.06473574787378311, metrics_train: {'pre_update_accuracy': 0.918754, 'updated_accuracy': 0.950064}, metrics_eval: {'accuracy': 0.8634, 'precision': 0.87278104, 'recall': 0.8555}
+Epoch 90/200: starting training,  ETA: 1186.4 minutes.
+Epoch 90/200: loss: 0.1458408236503601, ce_loss: 0.139464870095253, byol_loss: 0.06375905871391296, metrics_train: {'pre_update_accuracy': 0.9089709, 'updated_accuracy': 0.9504041}, metrics_eval: {'accuracy': 0.8486, 'precision': 0.8582469, 'recall': 0.844}
+Epoch 91/200: starting training,  ETA: 1175.5 minutes.
+Saving checkpoint to /no_backups/m134/gitrepos/experiments/models_final/2021-02-14-05-01-30-007/ckpts.
+Epoch 91/200: loss: 0.14166133105754852, ce_loss: 0.13564127683639526, byol_loss: 0.06020193174481392, metrics_train: {'pre_update_accuracy': 0.9134523, 'updated_accuracy': 0.95204467}, metrics_eval: {'accuracy': 0.8561, 'precision': 0.8674637, 'recall': 0.8489}
+Epoch 92/200: starting training,  ETA: 1164.5 minutes.
+Epoch 92/200: loss: 0.14127294719219208, ce_loss: 0.1352722942829132, byol_loss: 0.06000750884413719, metrics_train: {'pre_update_accuracy': 0.92141485, 'updated_accuracy': 0.9516245}, metrics_eval: {'accuracy': 0.8255, 'precision': 0.8356569, 'recall': 0.8212}
+Epoch 93/200: starting training,  ETA: 1153.2 minutes.
+Epoch 93/200: loss: 0.14214462041854858, ce_loss: 0.13592806458473206, byol_loss: 0.062165357172489166, metrics_train: {'pre_update_accuracy': 0.91521287, 'updated_accuracy': 0.9523047}, metrics_eval: {'accuracy': 0.8765, 'precision': 0.8851558, 'recall': 0.8694}
+Epoch 94/200: starting training,  ETA: 1142.2 minutes.
+Epoch 94/200: loss: 0.13767676055431366, ce_loss: 0.131438747048378, byol_loss: 0.06238006055355072, metrics_train: {'pre_update_accuracy': 0.9277969, 'updated_accuracy': 0.95364517}, metrics_eval: {'accuracy': 0.859, 'precision': 0.870665, 'recall': 0.8536}
+Epoch 95/200: starting training,  ETA: 1131.2 minutes.
+Epoch 95/200: loss: 0.13669835031032562, ce_loss: 0.1305461823940277, byol_loss: 0.061522651463747025, metrics_train: {'pre_update_accuracy': 0.9234355, 'updated_accuracy': 0.953085}, metrics_eval: {'accuracy': 0.8523, 'precision': 0.86416095, 'recall': 0.8461}
+Epoch 96/200: starting training,  ETA: 1120.4 minutes.
+Saving checkpoint to /no_backups/m134/gitrepos/experiments/models_final/2021-02-14-05-01-30-007/ckpts.
+Epoch 96/200: loss: 0.13965655863285065, ce_loss: 0.13357853889465332, byol_loss: 0.06077956780791283, metrics_train: {'pre_update_accuracy': 0.90851074, 'updated_accuracy': 0.95270485}, metrics_eval: {'accuracy': 0.8741, 'precision': 0.8822932, 'recall': 0.8695}
+Epoch 97/200: starting training,  ETA: 1109.5 minutes.
+Epoch 97/200: loss: 0.1345542073249817, ce_loss: 0.12915897369384766, byol_loss: 0.05395272746682167, metrics_train: {'pre_update_accuracy': 0.921775, 'updated_accuracy': 0.9539853}, metrics_eval: {'accuracy': 0.8663, 'precision': 0.87515265, 'recall': 0.8601}
+Epoch 98/200: starting training,  ETA: 1098.5 minutes.
+Epoch 98/200: loss: 0.13000641763210297, ce_loss: 0.12350133806467056, byol_loss: 0.06504926085472107, metrics_train: {'pre_update_accuracy': 0.9168134, 'updated_accuracy': 0.9569462}, metrics_eval: {'accuracy': 0.8743, 'precision': 0.88232905, 'recall': 0.8698}
+Epoch 99/200: starting training,  ETA: 1087.6 minutes.
+Epoch 99/200: loss: 0.12844714522361755, ce_loss: 0.12195813655853271, byol_loss: 0.06488963216543198, metrics_train: {'pre_update_accuracy': 0.9275168, 'updated_accuracy': 0.9572063}, metrics_eval: {'accuracy': 0.8732, 'precision': 0.88131285, 'recall': 0.8673}
+Epoch 100/200: starting training,  ETA: 1076.7 minutes.
+Epoch 100/200: loss: 0.12726858258247375, ce_loss: 0.12015672028064728, byol_loss: 0.07111940532922745, metrics_train: {'pre_update_accuracy': 0.92365557, 'updated_accuracy': 0.9572063}, metrics_eval: {'accuracy': 0.858, 'precision': 0.86531234, 'recall': 0.8519}
+Epoch 101/200: starting training,  ETA: 1065.9 minutes.
+Saving checkpoint to /no_backups/m134/gitrepos/experiments/models_final/2021-02-14-05-01-30-007/ckpts.
+Epoch 101/200: loss: 0.1285826712846756, ce_loss: 0.12194108217954636, byol_loss: 0.06641539186239243, metrics_train: {'pre_update_accuracy': 0.91773367, 'updated_accuracy': 0.956386}, metrics_eval: {'accuracy': 0.8452, 'precision': 0.85383916, 'recall': 0.8418}
+Epoch 102/200: starting training,  ETA: 1055.0 minutes.
+Epoch 102/200: loss: 0.12691983580589294, ce_loss: 0.12044725567102432, byol_loss: 0.06472501903772354, metrics_train: {'pre_update_accuracy': 0.924996, 'updated_accuracy': 0.956286}, metrics_eval: {'accuracy': 0.8572, 'precision': 0.86604327, 'recall': 0.8521}
+Epoch 103/200: starting training,  ETA: 1044.1 minutes.
+Epoch 103/200: loss: 0.12425677478313446, ce_loss: 0.1183946430683136, byol_loss: 0.05862315371632576, metrics_train: {'pre_update_accuracy': 0.92393565, 'updated_accuracy': 0.9578265}, metrics_eval: {'accuracy': 0.865, 'precision': 0.87432474, 'recall': 0.8578}
+Epoch 104/200: starting training,  ETA: 1033.2 minutes.
+Epoch 104/200: loss: 0.11736486107110977, ce_loss: 0.1115100309252739, byol_loss: 0.0585482083261013, metrics_train: {'pre_update_accuracy': 0.9230954, 'updated_accuracy': 0.9609875}, metrics_eval: {'accuracy': 0.8568, 'precision': 0.86621225, 'recall': 0.8514}
+Epoch 105/200: starting training,  ETA: 1022.3 minutes.
+Epoch 105/200: loss: 0.11985643953084946, ce_loss: 0.11400645226240158, byol_loss: 0.05849932134151459, metrics_train: {'pre_update_accuracy': 0.9255962, 'updated_accuracy': 0.95946705}, metrics_eval: {'accuracy': 0.8567, 'precision': 0.8654276, 'recall': 0.8521}
+Epoch 106/200: starting training,  ETA: 1011.6 minutes.
+Saving checkpoint to /no_backups/m134/gitrepos/experiments/models_final/2021-02-14-05-01-30-007/ckpts.
+Epoch 106/200: loss: 0.12191630899906158, ce_loss: 0.11599881947040558, byol_loss: 0.059174545109272, metrics_train: {'pre_update_accuracy': 0.93077785, 'updated_accuracy': 0.9580866}, metrics_eval: {'accuracy': 0.8737, 'precision': 0.8812062, 'recall': 0.8679}
+Epoch 107/200: starting training,  ETA: 1000.7 minutes.
+Epoch 107/200: loss: 0.1177598088979721, ce_loss: 0.11222159117460251, byol_loss: 0.05538133159279823, metrics_train: {'pre_update_accuracy': 0.9309979, 'updated_accuracy': 0.959347}, metrics_eval: {'accuracy': 0.8623, 'precision': 0.87028396, 'recall': 0.8581}
+Epoch 108/200: starting training,  ETA: 989.9 minutes.
+Epoch 108/200: loss: 0.1126910001039505, ce_loss: 0.10727964341640472, byol_loss: 0.054112501442432404, metrics_train: {'pre_update_accuracy': 0.921915, 'updated_accuracy': 0.9618478}, metrics_eval: {'accuracy': 0.8682, 'precision': 0.87583756, 'recall': 0.8627}
+Epoch 109/200: starting training,  ETA: 979.1 minutes.
+Epoch 109/200: loss: 0.11363964527845383, ce_loss: 0.10799035429954529, byol_loss: 0.05649400129914284, metrics_train: {'pre_update_accuracy': 0.9227353, 'updated_accuracy': 0.96144766}, metrics_eval: {'accuracy': 0.8621, 'precision': 0.86857027, 'recall': 0.8578}
+Epoch 110/200: starting training,  ETA: 968.2 minutes.
+Epoch 110/200: loss: 0.11689591407775879, ce_loss: 0.11116427183151245, byol_loss: 0.05731895565986633, metrics_train: {'pre_update_accuracy': 0.9204745, 'updated_accuracy': 0.96110755}, metrics_eval: {'accuracy': 0.8532, 'precision': 0.8616589, 'recall': 0.8477}
+Epoch 111/200: starting training,  ETA: 957.5 minutes.
+Saving checkpoint to /no_backups/m134/gitrepos/experiments/models_final/2021-02-14-05-01-30-007/ckpts.
+Epoch 111/200: loss: 0.10906972736120224, ce_loss: 0.10356280952692032, byol_loss: 0.055069297552108765, metrics_train: {'pre_update_accuracy': 0.93257844, 'updated_accuracy': 0.9626881}, metrics_eval: {'accuracy': 0.8329, 'precision': 0.8421267, 'recall': 0.8268}
+Epoch 112/200: starting training,  ETA: 946.7 minutes.
+Epoch 112/200: loss: 0.11194220185279846, ce_loss: 0.10620772838592529, byol_loss: 0.05734525993466377, metrics_train: {'pre_update_accuracy': 0.93169814, 'updated_accuracy': 0.9615477}, metrics_eval: {'accuracy': 0.869, 'precision': 0.87844014, 'recall': 0.865}
+Epoch 113/200: starting training,  ETA: 935.9 minutes.
+Epoch 113/200: loss: 0.10815471410751343, ce_loss: 0.10258599370718002, byol_loss: 0.05568671226501465, metrics_train: {'pre_update_accuracy': 0.9390805, 'updated_accuracy': 0.96424854}, metrics_eval: {'accuracy': 0.856, 'precision': 0.86613053, 'recall': 0.8508}
+Epoch 114/200: starting training,  ETA: 925.1 minutes.
+Epoch 114/200: loss: 0.10602320730686188, ce_loss: 0.10046053677797318, byol_loss: 0.05562658607959747, metrics_train: {'pre_update_accuracy': 0.9296775, 'updated_accuracy': 0.9644886}, metrics_eval: {'accuracy': 0.8563, 'precision': 0.8622191, 'recall': 0.8517}
+Epoch 115/200: starting training,  ETA: 914.3 minutes.
+Epoch 115/200: loss: 0.10376273840665817, ce_loss: 0.098072849214077, byol_loss: 0.05689750984311104, metrics_train: {'pre_update_accuracy': 0.9230754, 'updated_accuracy': 0.9647087}, metrics_eval: {'accuracy': 0.8564, 'precision': 0.8640235, 'recall': 0.8521}
+Epoch 116/200: starting training,  ETA: 903.5 minutes.
+Saving checkpoint to /no_backups/m134/gitrepos/experiments/models_final/2021-02-14-05-01-30-007/ckpts.
+Epoch 116/200: loss: 0.10494182258844376, ce_loss: 0.09920982271432877, byol_loss: 0.05732065811753273, metrics_train: {'pre_update_accuracy': 0.9233955, 'updated_accuracy': 0.9647287}, metrics_eval: {'accuracy': 0.857, 'precision': 0.8635857, 'recall': 0.8521}
+Epoch 117/200: starting training,  ETA: 892.8 minutes.
+Epoch 117/200: loss: 0.10345905274152756, ce_loss: 0.09768454730510712, byol_loss: 0.05774403363466263, metrics_train: {'pre_update_accuracy': 0.9228153, 'updated_accuracy': 0.9647087}, metrics_eval: {'accuracy': 0.8751, 'precision': 0.88164544, 'recall': 0.8723}
+Epoch 118/200: starting training,  ETA: 882.0 minutes.
+Epoch 118/200: loss: 0.10333722084760666, ce_loss: 0.09785779565572739, byol_loss: 0.054795242846012115, metrics_train: {'pre_update_accuracy': 0.9294974, 'updated_accuracy': 0.965549}, metrics_eval: {'accuracy': 0.8685, 'precision': 0.8763566, 'recall': 0.864}
+Epoch 119/200: starting training,  ETA: 871.2 minutes.
+Epoch 119/200: loss: 0.10196531563997269, ce_loss: 0.09643585979938507, byol_loss: 0.055295106023550034, metrics_train: {'pre_update_accuracy': 0.93209827, 'updated_accuracy': 0.96552896}, metrics_eval: {'accuracy': 0.8684, 'precision': 0.8766109, 'recall': 0.8639}
+Epoch 120/200: starting training,  ETA: 860.5 minutes.
+Epoch 120/200: loss: 0.09939068555831909, ce_loss: 0.09394156187772751, byol_loss: 0.054491009563207626, metrics_train: {'pre_update_accuracy': 0.92291534, 'updated_accuracy': 0.96672934}, metrics_eval: {'accuracy': 0.8531, 'precision': 0.8604769, 'recall': 0.848}
+Epoch 121/200: starting training,  ETA: 849.7 minutes.
+Saving checkpoint to /no_backups/m134/gitrepos/experiments/models_final/2021-02-14-05-01-30-007/ckpts.
+Epoch 121/200: loss: 0.09768009185791016, ce_loss: 0.09204970300197601, byol_loss: 0.05630435422062874, metrics_train: {'pre_update_accuracy': 0.92831707, 'updated_accuracy': 0.9681498}, metrics_eval: {'accuracy': 0.8614, 'precision': 0.86705786, 'recall': 0.857}
+Epoch 122/200: starting training,  ETA: 839.0 minutes.
+Epoch 122/200: loss: 0.09391762316226959, ce_loss: 0.08835557848215103, byol_loss: 0.055620111525058746, metrics_train: {'pre_update_accuracy': 0.9315181, 'updated_accuracy': 0.96881}, metrics_eval: {'accuracy': 0.8766, 'precision': 0.88374686, 'recall': 0.8727}
+Epoch 123/200: starting training,  ETA: 828.3 minutes.
+Epoch 123/200: loss: 0.09779445081949234, ce_loss: 0.0924406424164772, byol_loss: 0.05353739485144615, metrics_train: {'pre_update_accuracy': 0.9384203, 'updated_accuracy': 0.9670895}, metrics_eval: {'accuracy': 0.8511, 'precision': 0.85927355, 'recall': 0.8469}
+Epoch 124/200: starting training,  ETA: 817.5 minutes.
+Epoch 124/200: loss: 0.09334172308444977, ce_loss: 0.08781281858682632, byol_loss: 0.05528947338461876, metrics_train: {'pre_update_accuracy': 0.9359395, 'updated_accuracy': 0.9686099}, metrics_eval: {'accuracy': 0.8635, 'precision': 0.8700365, 'recall': 0.8589}
+Epoch 125/200: starting training,  ETA: 806.8 minutes.
+Epoch 125/200: loss: 0.09734850376844406, ce_loss: 0.0917101576924324, byol_loss: 0.056383341550827026, metrics_train: {'pre_update_accuracy': 0.91855395, 'updated_accuracy': 0.9675896}, metrics_eval: {'accuracy': 0.8486, 'precision': 0.85570675, 'recall': 0.8427}
+Epoch 126/200: starting training,  ETA: 796.1 minutes.
+Saving checkpoint to /no_backups/m134/gitrepos/experiments/models_final/2021-02-14-05-01-30-007/ckpts.
+Epoch 126/200: loss: 0.09748547524213791, ce_loss: 0.09190082550048828, byol_loss: 0.05584632605314255, metrics_train: {'pre_update_accuracy': 0.93517923, 'updated_accuracy': 0.96678936}, metrics_eval: {'accuracy': 0.8644, 'precision': 0.8721896, 'recall': 0.8612}
+Epoch 127/200: starting training,  ETA: 785.4 minutes.
+Epoch 127/200: loss: 0.09778443723917007, ce_loss: 0.09226641058921814, byol_loss: 0.055180151015520096, metrics_train: {'pre_update_accuracy': 0.9332386, 'updated_accuracy': 0.9673495}, metrics_eval: {'accuracy': 0.8674, 'precision': 0.8752282, 'recall': 0.8628}
+Epoch 128/200: starting training,  ETA: 774.6 minutes.
+Epoch 128/200: loss: 0.08967229723930359, ce_loss: 0.08444415777921677, byol_loss: 0.05228138715028763, metrics_train: {'pre_update_accuracy': 0.94058096, 'updated_accuracy': 0.96965027}, metrics_eval: {'accuracy': 0.8569, 'precision': 0.86227787, 'recall': 0.854}
+Epoch 129/200: starting training,  ETA: 763.9 minutes.
+Epoch 129/200: loss: 0.08847136795520782, ce_loss: 0.08324335515499115, byol_loss: 0.052279483526945114, metrics_train: {'pre_update_accuracy': 0.93353873, 'updated_accuracy': 0.97135085}, metrics_eval: {'accuracy': 0.8525, 'precision': 0.8586308, 'recall': 0.8491}
+Epoch 130/200: starting training,  ETA: 753.2 minutes.
+Epoch 130/200: loss: 0.09008349478244781, ce_loss: 0.08451831340789795, byol_loss: 0.055650658905506134, metrics_train: {'pre_update_accuracy': 0.93723994, 'updated_accuracy': 0.97013044}, metrics_eval: {'accuracy': 0.8586, 'precision': 0.86430234, 'recall': 0.8554}
+Epoch 131/200: starting training,  ETA: 742.5 minutes.
+Saving checkpoint to /no_backups/m134/gitrepos/experiments/models_final/2021-02-14-05-01-30-007/ckpts.
+Epoch 131/200: loss: 0.08578129857778549, ce_loss: 0.08051520586013794, byol_loss: 0.052660226821899414, metrics_train: {'pre_update_accuracy': 0.9384403, 'updated_accuracy': 0.97179097}, metrics_eval: {'accuracy': 0.8683, 'precision': 0.8767499, 'recall': 0.8643}
+Epoch 132/200: starting training,  ETA: 731.8 minutes.
+Epoch 132/200: loss: 0.0876569151878357, ce_loss: 0.08218163996934891, byol_loss: 0.05475173890590668, metrics_train: {'pre_update_accuracy': 0.9396207, 'updated_accuracy': 0.9715509}, metrics_eval: {'accuracy': 0.8662, 'precision': 0.87239844, 'recall': 0.8635}
+Epoch 133/200: starting training,  ETA: 721.0 minutes.
+Epoch 133/200: loss: 0.08688559383153915, ce_loss: 0.0817149356007576, byol_loss: 0.05170774459838867, metrics_train: {'pre_update_accuracy': 0.93387884, 'updated_accuracy': 0.97139084}, metrics_eval: {'accuracy': 0.8645, 'precision': 0.8709612, 'recall': 0.8599}
+Epoch 134/200: starting training,  ETA: 710.3 minutes.
+Epoch 134/200: loss: 0.08326718956232071, ce_loss: 0.07797447592020035, byol_loss: 0.052926480770111084, metrics_train: {'pre_update_accuracy': 0.93860036, 'updated_accuracy': 0.97261125}, metrics_eval: {'accuracy': 0.8566, 'precision': 0.8624734, 'recall': 0.8529}
+Epoch 135/200: starting training,  ETA: 699.7 minutes.
+Epoch 135/200: loss: 0.08681946992874146, ce_loss: 0.08166375756263733, byol_loss: 0.05155739188194275, metrics_train: {'pre_update_accuracy': 0.943702, 'updated_accuracy': 0.9720911}, metrics_eval: {'accuracy': 0.852, 'precision': 0.86072224, 'recall': 0.8485}
+Epoch 136/200: starting training,  ETA: 689.0 minutes.
+Saving checkpoint to /no_backups/m134/gitrepos/experiments/models_final/2021-02-14-05-01-30-007/ckpts.
+Epoch 136/200: loss: 0.08612893521785736, ce_loss: 0.08068414032459259, byol_loss: 0.054447468370199203, metrics_train: {'pre_update_accuracy': 0.93479913, 'updated_accuracy': 0.97075063}, metrics_eval: {'accuracy': 0.8597, 'precision': 0.866262, 'recall': 0.8563}
+Epoch 137/200: starting training,  ETA: 678.3 minutes.
+Epoch 137/200: loss: 0.08305196464061737, ce_loss: 0.07815547287464142, byol_loss: 0.04896394535899162, metrics_train: {'pre_update_accuracy': 0.9356994, 'updated_accuracy': 0.97333145}, metrics_eval: {'accuracy': 0.8338, 'precision': 0.8391919, 'recall': 0.8308}
+Epoch 138/200: starting training,  ETA: 667.6 minutes.
+Epoch 138/200: loss: 0.08369118720293045, ce_loss: 0.0789838656783104, byol_loss: 0.047073282301425934, metrics_train: {'pre_update_accuracy': 0.9235755, 'updated_accuracy': 0.97325146}, metrics_eval: {'accuracy': 0.8441, 'precision': 0.85272026, 'recall': 0.8401}
+Epoch 139/200: starting training,  ETA: 657.0 minutes.
+Epoch 139/200: loss: 0.0801948606967926, ce_loss: 0.0751473531126976, byol_loss: 0.050476111471652985, metrics_train: {'pre_update_accuracy': 0.93928057, 'updated_accuracy': 0.97391164}, metrics_eval: {'accuracy': 0.8751, 'precision': 0.88007677, 'recall': 0.8711}
+Epoch 140/200: starting training,  ETA: 646.4 minutes.
+Epoch 140/200: loss: 0.08148419857025146, ce_loss: 0.07615738362073898, byol_loss: 0.05326835438609123, metrics_train: {'pre_update_accuracy': 0.94490236, 'updated_accuracy': 0.97323143}, metrics_eval: {'accuracy': 0.8529, 'precision': 0.86057353, 'recall': 0.8493}
+Epoch 141/200: starting training,  ETA: 635.7 minutes.
+Saving checkpoint to /no_backups/m134/gitrepos/experiments/models_final/2021-02-14-05-01-30-007/ckpts.
+Epoch 141/200: loss: 0.08309900015592575, ce_loss: 0.07779990881681442, byol_loss: 0.052990496158599854, metrics_train: {'pre_update_accuracy': 0.94426215, 'updated_accuracy': 0.9725712}, metrics_eval: {'accuracy': 0.8716, 'precision': 0.8787144, 'recall': 0.8694}
+Epoch 142/200: starting training,  ETA: 625.0 minutes.
+Epoch 142/200: loss: 0.08106076717376709, ce_loss: 0.07620913535356522, byol_loss: 0.04851600527763367, metrics_train: {'pre_update_accuracy': 0.94616276, 'updated_accuracy': 0.9730114}, metrics_eval: {'accuracy': 0.8692, 'precision': 0.8764432, 'recall': 0.8654}
+Epoch 143/200: starting training,  ETA: 614.3 minutes.
+Epoch 143/200: loss: 0.0762738361954689, ce_loss: 0.07129734009504318, byol_loss: 0.04976437985897064, metrics_train: {'pre_update_accuracy': 0.94460225, 'updated_accuracy': 0.9756522}, metrics_eval: {'accuracy': 0.8658, 'precision': 0.87232107, 'recall': 0.8629}
+Epoch 144/200: starting training,  ETA: 603.7 minutes.
+Epoch 144/200: loss: 0.0783521980047226, ce_loss: 0.07344672828912735, byol_loss: 0.04905647411942482, metrics_train: {'pre_update_accuracy': 0.94586265, 'updated_accuracy': 0.97367156}, metrics_eval: {'accuracy': 0.8645, 'precision': 0.86914, 'recall': 0.8621}
+Epoch 145/200: starting training,  ETA: 593.0 minutes.
+Epoch 145/200: loss: 0.08034547418355942, ce_loss: 0.0753539428114891, byol_loss: 0.04991566389799118, metrics_train: {'pre_update_accuracy': 0.9340189, 'updated_accuracy': 0.9733115}, metrics_eval: {'accuracy': 0.8585, 'precision': 0.86456436, 'recall': 0.8554}
+Epoch 146/200: starting training,  ETA: 582.3 minutes.
+Saving checkpoint to /no_backups/m134/gitrepos/experiments/models_final/2021-02-14-05-01-30-007/ckpts.
+Epoch 146/200: loss: 0.07316355407238007, ce_loss: 0.0682024359703064, byol_loss: 0.04961119964718819, metrics_train: {'pre_update_accuracy': 0.9401208, 'updated_accuracy': 0.97619236}, metrics_eval: {'accuracy': 0.8605, 'precision': 0.8658845, 'recall': 0.8561}
+Epoch 147/200: starting training,  ETA: 571.5 minutes.
+Epoch 147/200: loss: 0.07412358373403549, ce_loss: 0.06914323568344116, byol_loss: 0.04980328679084778, metrics_train: {'pre_update_accuracy': 0.95304495, 'updated_accuracy': 0.9756722}, metrics_eval: {'accuracy': 0.8659, 'precision': 0.8728968, 'recall': 0.8612}
+Epoch 148/200: starting training,  ETA: 560.8 minutes.
+Epoch 148/200: loss: 0.07131335884332657, ce_loss: 0.06616264581680298, byol_loss: 0.051506996154785156, metrics_train: {'pre_update_accuracy': 0.94946384, 'updated_accuracy': 0.9771527}, metrics_eval: {'accuracy': 0.8687, 'precision': 0.8739021, 'recall': 0.8656}
+Epoch 149/200: starting training,  ETA: 550.1 minutes.
+Epoch 149/200: loss: 0.0777406245470047, ce_loss: 0.0725347176194191, byol_loss: 0.05206044390797615, metrics_train: {'pre_update_accuracy': 0.9361396, 'updated_accuracy': 0.97425175}, metrics_eval: {'accuracy': 0.8616, 'precision': 0.86627674, 'recall': 0.859}
+Epoch 150/200: starting training,  ETA: 539.4 minutes.
+Epoch 150/200: loss: 0.07173506170511246, ce_loss: 0.06649219244718552, byol_loss: 0.0524277500808239, metrics_train: {'pre_update_accuracy': 0.9539453, 'updated_accuracy': 0.9768526}, metrics_eval: {'accuracy': 0.8757, 'precision': 0.88097405, 'recall': 0.8719}
+Epoch 151/200: starting training,  ETA: 528.7 minutes.
+Saving checkpoint to /no_backups/m134/gitrepos/experiments/models_final/2021-02-14-05-01-30-007/ckpts.
+Epoch 151/200: loss: 0.07770925015211105, ce_loss: 0.07241029292345047, byol_loss: 0.0529882051050663, metrics_train: {'pre_update_accuracy': 0.943722, 'updated_accuracy': 0.9746919}, metrics_eval: {'accuracy': 0.8817, 'precision': 0.88665724, 'recall': 0.8785}
+Epoch 152/200: starting training,  ETA: 518.0 minutes.
+Epoch 152/200: loss: 0.07232742756605148, ce_loss: 0.06742784380912781, byol_loss: 0.0489962100982666, metrics_train: {'pre_update_accuracy': 0.9456426, 'updated_accuracy': 0.9765125}, metrics_eval: {'accuracy': 0.8537, 'precision': 0.8586551, 'recall': 0.8517}
+Epoch 153/200: starting training,  ETA: 507.3 minutes.
+Epoch 153/200: loss: 0.07102040946483612, ce_loss: 0.06609781831502914, byol_loss: 0.0492253303527832, metrics_train: {'pre_update_accuracy': 0.93948066, 'updated_accuracy': 0.9772127}, metrics_eval: {'accuracy': 0.8665, 'precision': 0.8716939, 'recall': 0.8635}
+Epoch 154/200: starting training,  ETA: 496.6 minutes.
+Epoch 154/200: loss: 0.07040977478027344, ce_loss: 0.06585238873958588, byol_loss: 0.04557449743151665, metrics_train: {'pre_update_accuracy': 0.9321183, 'updated_accuracy': 0.97693264}, metrics_eval: {'accuracy': 0.8668, 'precision': 0.8720566, 'recall': 0.8629}
+Epoch 155/200: starting training,  ETA: 485.9 minutes.
+Epoch 155/200: loss: 0.07202262431383133, ce_loss: 0.06740055978298187, byol_loss: 0.04621964320540428, metrics_train: {'pre_update_accuracy': 0.950064, 'updated_accuracy': 0.9762724}, metrics_eval: {'accuracy': 0.8718, 'precision': 0.8769433, 'recall': 0.8687}
+Epoch 156/200: starting training,  ETA: 475.3 minutes.
+Saving checkpoint to /no_backups/m134/gitrepos/experiments/models_final/2021-02-14-05-01-30-007/ckpts.
+Epoch 156/200: loss: 0.06713572889566422, ce_loss: 0.062361132353544235, byol_loss: 0.047745879739522934, metrics_train: {'pre_update_accuracy': 0.95358515, 'updated_accuracy': 0.9785531}, metrics_eval: {'accuracy': 0.8639, 'precision': 0.87117, 'recall': 0.8615}
+Epoch 157/200: starting training,  ETA: 464.7 minutes.
+Epoch 157/200: loss: 0.07073216140270233, ce_loss: 0.06571175158023834, byol_loss: 0.05020367354154587, metrics_train: {'pre_update_accuracy': 0.94824344, 'updated_accuracy': 0.97701263}, metrics_eval: {'accuracy': 0.8669, 'precision': 0.8730287, 'recall': 0.8636}
+Epoch 158/200: starting training,  ETA: 454.1 minutes.
+Epoch 158/200: loss: 0.06976205855607986, ce_loss: 0.06501979380846024, byol_loss: 0.047423094511032104, metrics_train: {'pre_update_accuracy': 0.9488036, 'updated_accuracy': 0.97649246}, metrics_eval: {'accuracy': 0.8722, 'precision': 0.87744606, 'recall': 0.8699}
+Epoch 159/200: starting training,  ETA: 443.5 minutes.
+Epoch 159/200: loss: 0.06536983698606491, ce_loss: 0.06046510115265846, byol_loss: 0.04904763400554657, metrics_train: {'pre_update_accuracy': 0.9494438, 'updated_accuracy': 0.9791333}, metrics_eval: {'accuracy': 0.8658, 'precision': 0.87055737, 'recall': 0.8622}
+Epoch 160/200: starting training,  ETA: 432.9 minutes.
+Epoch 160/200: loss: 0.06663651764392853, ce_loss: 0.06155601143836975, byol_loss: 0.05080553516745567, metrics_train: {'pre_update_accuracy': 0.94426215, 'updated_accuracy': 0.97825307}, metrics_eval: {'accuracy': 0.8638, 'precision': 0.8700394, 'recall': 0.8616}
+Epoch 161/200: starting training,  ETA: 422.4 minutes.
+Saving checkpoint to /no_backups/m134/gitrepos/experiments/models_final/2021-02-14-05-01-30-007/ckpts.
+Epoch 161/200: loss: 0.0690358579158783, ce_loss: 0.06387542933225632, byol_loss: 0.051605094224214554, metrics_train: {'pre_update_accuracy': 0.9394406, 'updated_accuracy': 0.9777329}, metrics_eval: {'accuracy': 0.8622, 'precision': 0.8690681, 'recall': 0.8589}
+Epoch 162/200: starting training,  ETA: 411.8 minutes.
+Epoch 162/200: loss: 0.06405716389417648, ce_loss: 0.05889737606048584, byol_loss: 0.05159834399819374, metrics_train: {'pre_update_accuracy': 0.95116436, 'updated_accuracy': 0.97897327}, metrics_eval: {'accuracy': 0.877, 'precision': 0.8823767, 'recall': 0.8747}
+Epoch 163/200: starting training,  ETA: 401.2 minutes.
+Epoch 163/200: loss: 0.06473182141780853, ce_loss: 0.0595959909260273, byol_loss: 0.0513584166765213, metrics_train: {'pre_update_accuracy': 0.95382524, 'updated_accuracy': 0.97877324}, metrics_eval: {'accuracy': 0.8712, 'precision': 0.8767691, 'recall': 0.8673}
+Epoch 164/200: starting training,  ETA: 390.6 minutes.
+Epoch 164/200: loss: 0.06239413470029831, ce_loss: 0.0577169694006443, byol_loss: 0.04677187278866768, metrics_train: {'pre_update_accuracy': 0.9537452, 'updated_accuracy': 0.9800536}, metrics_eval: {'accuracy': 0.864, 'precision': 0.86905605, 'recall': 0.8608}
+Epoch 165/200: starting training,  ETA: 380.0 minutes.
+Epoch 165/200: loss: 0.06348475068807602, ce_loss: 0.058736201375722885, byol_loss: 0.047485511749982834, metrics_train: {'pre_update_accuracy': 0.9540053, 'updated_accuracy': 0.97919333}, metrics_eval: {'accuracy': 0.8657, 'precision': 0.8718026, 'recall': 0.8623}
+Epoch 166/200: starting training,  ETA: 369.5 minutes.
+Saving checkpoint to /no_backups/m134/gitrepos/experiments/models_final/2021-02-14-05-01-30-007/ckpts.
+Epoch 166/200: loss: 0.06360562890768051, ce_loss: 0.05882498621940613, byol_loss: 0.04780640825629234, metrics_train: {'pre_update_accuracy': 0.94670296, 'updated_accuracy': 0.9796135}, metrics_eval: {'accuracy': 0.8755, 'precision': 0.8801978, 'recall': 0.8721}
+Epoch 167/200: starting training,  ETA: 358.9 minutes.
+Epoch 167/200: loss: 0.06204889342188835, ce_loss: 0.057342007756233215, byol_loss: 0.04706893861293793, metrics_train: {'pre_update_accuracy': 0.94794333, 'updated_accuracy': 0.9793934}, metrics_eval: {'accuracy': 0.8525, 'precision': 0.857532, 'recall': 0.8499}
+Epoch 168/200: starting training,  ETA: 348.3 minutes.
+Epoch 168/200: loss: 0.0645548403263092, ce_loss: 0.05951741337776184, byol_loss: 0.05037429928779602, metrics_train: {'pre_update_accuracy': 0.9521447, 'updated_accuracy': 0.98051375}, metrics_eval: {'accuracy': 0.8828, 'precision': 0.88782406, 'recall': 0.8801}
+Epoch 169/200: starting training,  ETA: 337.7 minutes.
+Epoch 169/200: loss: 0.06417093425989151, ce_loss: 0.0594453364610672, byol_loss: 0.04725632816553116, metrics_train: {'pre_update_accuracy': 0.94912374, 'updated_accuracy': 0.97887325}, metrics_eval: {'accuracy': 0.8779, 'precision': 0.8826495, 'recall': 0.8755}
+Epoch 170/200: starting training,  ETA: 327.2 minutes.
+Epoch 170/200: loss: 0.06324878334999084, ce_loss: 0.05821416527032852, byol_loss: 0.05034669116139412, metrics_train: {'pre_update_accuracy': 0.9535251, 'updated_accuracy': 0.9797335}, metrics_eval: {'accuracy': 0.8687, 'precision': 0.8733858, 'recall': 0.8657}
+Epoch 171/200: starting training,  ETA: 316.6 minutes.
+Saving checkpoint to /no_backups/m134/gitrepos/experiments/models_final/2021-02-14-05-01-30-007/ckpts.
+Epoch 171/200: loss: 0.06293501704931259, ce_loss: 0.05765324458479881, byol_loss: 0.05281778424978256, metrics_train: {'pre_update_accuracy': 0.9498239, 'updated_accuracy': 0.9796135}, metrics_eval: {'accuracy': 0.8516, 'precision': 0.8572006, 'recall': 0.8482}
+Epoch 172/200: starting training,  ETA: 306.0 minutes.
+Epoch 172/200: loss: 0.058894917368888855, ce_loss: 0.053921688348054886, byol_loss: 0.04973173141479492, metrics_train: {'pre_update_accuracy': 0.9537252, 'updated_accuracy': 0.9808939}, metrics_eval: {'accuracy': 0.8658, 'precision': 0.86930215, 'recall': 0.862}
+Epoch 173/200: starting training,  ETA: 295.4 minutes.
+Epoch 173/200: loss: 0.059221476316452026, ce_loss: 0.054172877222299576, byol_loss: 0.05048553645610809, metrics_train: {'pre_update_accuracy': 0.9589068, 'updated_accuracy': 0.98043376}, metrics_eval: {'accuracy': 0.8775, 'precision': 0.8823707, 'recall': 0.8754}
+Epoch 174/200: starting training,  ETA: 284.9 minutes.
+Epoch 174/200: loss: 0.05833674967288971, ce_loss: 0.05316867306828499, byol_loss: 0.05168018117547035, metrics_train: {'pre_update_accuracy': 0.96222794, 'updated_accuracy': 0.9818942}, metrics_eval: {'accuracy': 0.8663, 'precision': 0.8710622, 'recall': 0.8627}
+Epoch 175/200: starting training,  ETA: 274.3 minutes.
+Epoch 175/200: loss: 0.05962669104337692, ce_loss: 0.054611001163721085, byol_loss: 0.05015779286623001, metrics_train: {'pre_update_accuracy': 0.9615877, 'updated_accuracy': 0.9814141}, metrics_eval: {'accuracy': 0.8703, 'precision': 0.8748992, 'recall': 0.8679}
+Epoch 176/200: starting training,  ETA: 263.8 minutes.
+Saving checkpoint to /no_backups/m134/gitrepos/experiments/models_final/2021-02-14-05-01-30-007/ckpts.
+Epoch 176/200: loss: 0.06139445677399635, ce_loss: 0.0563465841114521, byol_loss: 0.0504787415266037, metrics_train: {'pre_update_accuracy': 0.9484435, 'updated_accuracy': 0.98021364}, metrics_eval: {'accuracy': 0.8668, 'precision': 0.87152356, 'recall': 0.8649}
+Epoch 177/200: starting training,  ETA: 253.2 minutes.
+Epoch 177/200: loss: 0.05700673162937164, ce_loss: 0.052505865693092346, byol_loss: 0.04500935599207878, metrics_train: {'pre_update_accuracy': 0.95980716, 'updated_accuracy': 0.9809339}, metrics_eval: {'accuracy': 0.8788, 'precision': 0.884596, 'recall': 0.8769}
+Epoch 178/200: starting training,  ETA: 242.6 minutes.
+Epoch 178/200: loss: 0.0590796172618866, ce_loss: 0.054040927439928055, byol_loss: 0.05038689076900482, metrics_train: {'pre_update_accuracy': 0.96012723, 'updated_accuracy': 0.98109394}, metrics_eval: {'accuracy': 0.8714, 'precision': 0.8760339, 'recall': 0.8685}
+Epoch 179/200: starting training,  ETA: 232.1 minutes.
+Epoch 179/200: loss: 0.05817137286067009, ce_loss: 0.05331776663661003, byol_loss: 0.048535555601119995, metrics_train: {'pre_update_accuracy': 0.9552457, 'updated_accuracy': 0.98169416}, metrics_eval: {'accuracy': 0.8728, 'precision': 0.87864715, 'recall': 0.8703}
+Epoch 180/200: starting training,  ETA: 221.5 minutes.
+Epoch 180/200: loss: 0.054803214967250824, ce_loss: 0.05007852613925934, byol_loss: 0.04724687710404396, metrics_train: {'pre_update_accuracy': 0.95912695, 'updated_accuracy': 0.9828345}, metrics_eval: {'accuracy': 0.8747, 'precision': 0.8799314, 'recall': 0.8721}
+Epoch 181/200: starting training,  ETA: 210.9 minutes.
+Saving checkpoint to /no_backups/m134/gitrepos/experiments/models_final/2021-02-14-05-01-30-007/ckpts.
+Epoch 181/200: loss: 0.056061502546072006, ce_loss: 0.05121912062168121, byol_loss: 0.048423778265714645, metrics_train: {'pre_update_accuracy': 0.9540453, 'updated_accuracy': 0.9820943}, metrics_eval: {'accuracy': 0.8865, 'precision': 0.89255446, 'recall': 0.8847}
+Epoch 182/200: starting training,  ETA: 200.4 minutes.
+Epoch 182/200: loss: 0.05734726041555405, ce_loss: 0.0522908978164196, byol_loss: 0.05056395381689072, metrics_train: {'pre_update_accuracy': 0.95940703, 'updated_accuracy': 0.9822543}, metrics_eval: {'accuracy': 0.881, 'precision': 0.88543767, 'recall': 0.878}
+Epoch 183/200: starting training,  ETA: 189.8 minutes.
+Epoch 183/200: loss: 0.05872117355465889, ce_loss: 0.0536339171230793, byol_loss: 0.050872158259153366, metrics_train: {'pre_update_accuracy': 0.9549256, 'updated_accuracy': 0.98071384}, metrics_eval: {'accuracy': 0.8772, 'precision': 0.8826201, 'recall': 0.8745}
+Epoch 184/200: starting training,  ETA: 179.3 minutes.
+Epoch 184/200: loss: 0.05388752743601799, ce_loss: 0.04879338666796684, byol_loss: 0.050941649824380875, metrics_train: {'pre_update_accuracy': 0.9637084, 'updated_accuracy': 0.9832146}, metrics_eval: {'accuracy': 0.8714, 'precision': 0.8758315, 'recall': 0.869}
+Epoch 185/200: starting training,  ETA: 168.7 minutes.
+Epoch 185/200: loss: 0.0554233118891716, ce_loss: 0.050561800599098206, byol_loss: 0.04861536622047424, metrics_train: {'pre_update_accuracy': 0.9611676, 'updated_accuracy': 0.9832547}, metrics_eval: {'accuracy': 0.8705, 'precision': 0.87479824, 'recall': 0.8671}
+Epoch 186/200: starting training,  ETA: 158.2 minutes.
+Saving checkpoint to /no_backups/m134/gitrepos/experiments/models_final/2021-02-14-05-01-30-007/ckpts.
+Epoch 186/200: loss: 0.05148860067129135, ce_loss: 0.04624611884355545, byol_loss: 0.05242493376135826, metrics_train: {'pre_update_accuracy': 0.96038735, 'updated_accuracy': 0.98391485}, metrics_eval: {'accuracy': 0.871, 'precision': 0.8757062, 'recall': 0.868}
+Epoch 187/200: starting training,  ETA: 147.6 minutes.
+Epoch 187/200: loss: 0.05538005009293556, ce_loss: 0.05017697811126709, byol_loss: 0.05203080549836159, metrics_train: {'pre_update_accuracy': 0.95930696, 'updated_accuracy': 0.9823344}, metrics_eval: {'accuracy': 0.8885, 'precision': 0.89343023, 'recall': 0.8853}
+Epoch 188/200: starting training,  ETA: 137.1 minutes.
+Epoch 188/200: loss: 0.05176478251814842, ce_loss: 0.046591803431510925, byol_loss: 0.05173018202185631, metrics_train: {'pre_update_accuracy': 0.9583667, 'updated_accuracy': 0.9837348}, metrics_eval: {'accuracy': 0.8848, 'precision': 0.88877696, 'recall': 0.8822}
+Epoch 189/200: starting training,  ETA: 126.5 minutes.
+Epoch 189/200: loss: 0.05461437627673149, ce_loss: 0.04933897778391838, byol_loss: 0.05275431647896767, metrics_train: {'pre_update_accuracy': 0.9578265, 'updated_accuracy': 0.9837748}, metrics_eval: {'accuracy': 0.875, 'precision': 0.87907773, 'recall': 0.8731}
+Epoch 190/200: starting training,  ETA: 116.0 minutes.
+Epoch 190/200: loss: 0.05305028706789017, ce_loss: 0.04807158559560776, byol_loss: 0.04978664964437485, metrics_train: {'pre_update_accuracy': 0.9581266, 'updated_accuracy': 0.9828545}, metrics_eval: {'accuracy': 0.8669, 'precision': 0.8715698, 'recall': 0.8639}
+Epoch 191/200: starting training,  ETA: 105.4 minutes.
+Saving checkpoint to /no_backups/m134/gitrepos/experiments/models_final/2021-02-14-05-01-30-007/ckpts.
+Epoch 191/200: loss: 0.05316869542002678, ce_loss: 0.048031408339738846, byol_loss: 0.051372651010751724, metrics_train: {'pre_update_accuracy': 0.9603673, 'updated_accuracy': 0.98357475}, metrics_eval: {'accuracy': 0.8568, 'precision': 0.86159587, 'recall': 0.8541}
+Epoch 192/200: starting training,  ETA: 94.9 minutes.
+Epoch 192/200: loss: 0.053787119686603546, ce_loss: 0.04855504259467125, byol_loss: 0.05232083424925804, metrics_train: {'pre_update_accuracy': 0.95508564, 'updated_accuracy': 0.9830946}, metrics_eval: {'accuracy': 0.8511, 'precision': 0.8557605, 'recall': 0.849}
+Epoch 193/200: starting training,  ETA: 84.3 minutes.
+Epoch 193/200: loss: 0.04968346282839775, ce_loss: 0.04463275521993637, byol_loss: 0.05050736665725708, metrics_train: {'pre_update_accuracy': 0.95980716, 'updated_accuracy': 0.9845751}, metrics_eval: {'accuracy': 0.8812, 'precision': 0.8853978, 'recall': 0.8792}
+Epoch 194/200: starting training,  ETA: 73.8 minutes.
+Epoch 194/200: loss: 0.052189283072948456, ce_loss: 0.04684901610016823, byol_loss: 0.053402747958898544, metrics_train: {'pre_update_accuracy': 0.96080744, 'updated_accuracy': 0.9838948}, metrics_eval: {'accuracy': 0.8728, 'precision': 0.87869614, 'recall': 0.8707}
+Epoch 195/200: starting training,  ETA: 63.2 minutes.
+Epoch 195/200: loss: 0.05001722276210785, ce_loss: 0.04491877928376198, byol_loss: 0.05098402872681618, metrics_train: {'pre_update_accuracy': 0.9589869, 'updated_accuracy': 0.984335}, metrics_eval: {'accuracy': 0.868, 'precision': 0.8722267, 'recall': 0.8649}
+Epoch 196/200: starting training,  ETA: 52.7 minutes.
+Saving checkpoint to /no_backups/m134/gitrepos/experiments/models_final/2021-02-14-05-01-30-007/ckpts.
+Epoch 196/200: loss: 0.052303485572338104, ce_loss: 0.04722236841917038, byol_loss: 0.050811175256967545, metrics_train: {'pre_update_accuracy': 0.9538452, 'updated_accuracy': 0.98327464}, metrics_eval: {'accuracy': 0.8539, 'precision': 0.85877013, 'recall': 0.8519}
+Epoch 197/200: starting training,  ETA: 42.2 minutes.
+Epoch 197/200: loss: 0.050761878490448, ce_loss: 0.04571397975087166, byol_loss: 0.05047902092337608, metrics_train: {'pre_update_accuracy': 0.95790654, 'updated_accuracy': 0.984475}, metrics_eval: {'accuracy': 0.8677, 'precision': 0.8717768, 'recall': 0.8655}
+Epoch 198/200: starting training,  ETA: 31.6 minutes.
+Epoch 198/200: loss: 0.05033918842673302, ce_loss: 0.045162469148635864, byol_loss: 0.051767926663160324, metrics_train: {'pre_update_accuracy': 0.96206784, 'updated_accuracy': 0.984335}, metrics_eval: {'accuracy': 0.8647, 'precision': 0.8690608, 'recall': 0.8615}
+Epoch 199/200: starting training,  ETA: 21.1 minutes.
+Epoch 199/200: loss: 0.05125190690159798, ce_loss: 0.04624580964446068, byol_loss: 0.050061628222465515, metrics_train: {'pre_update_accuracy': 0.9603073, 'updated_accuracy': 0.9837748}, metrics_eval: {'accuracy': 0.8664, 'precision': 0.87176126, 'recall': 0.8647}
+Epoch 200/200: starting training,  ETA: 10.5 minutes.
+Saving checkpoint to /no_backups/m134/gitrepos/experiments/models_final/2021-02-14-05-01-30-007/ckpts.
+Epoch 200/200: loss: 0.048476580530405045, ce_loss: 0.04361993446946144, byol_loss: 0.048565901815891266, metrics_train: {'pre_update_accuracy': 0.9667094, 'updated_accuracy': 0.9846551}, metrics_eval: {'accuracy': 0.8676, 'precision': 0.8713091, 'recall': 0.8646}

@@ -1,0 +1,76 @@
+
+# Global Parameter
+parallel_calls = -1 # -1: AUTOTUNE
+ds_name_train = 'cifar10'
+ds_name_eval = 'cifar10'
+ds_name_test = 'cifar10'
+tfds_path = '~/tensorflow_datasets'
+
+#result folder
+gen_run_folder.target = 'models_final'
+
+gen_pipeline_train_meta.ds_name=%ds_name_train
+gen_pipeline_train_meta.tfds_path=%tfds_path
+gen_pipeline_train_meta.inner_batch_size = 8
+gen_pipeline_train_meta.outer_batch_size = 4
+gen_pipeline_train_meta.b_shuffle=True
+gen_pipeline_train_meta.size_buffer_cpu = 2
+gen_pipeline_train_meta.shuffle_buffer_size = 50000
+gen_pipeline_train_meta.dataset_cache = True
+gen_pipeline_train_meta.augmentation_type = 'simclr'
+gen_pipeline_train_meta.use_batch_aug = True
+gen_pipeline_train_meta.image_repetition=False
+gen_pipeline_train_meta.num_parallel_calls = %parallel_calls
+
+# Batch specific augmentation
+batch_augmentation.flip_ud_rate = 0.5
+batch_augmentation.flip_rl_rate = 0.5
+batch_augmentation.blur_rate = 0.2
+
+gen_pipeline_eval_meta.ds_name = %ds_name_train
+gen_pipeline_eval_meta.tfds_path = %tfds_path
+gen_pipeline_eval_meta.dataset_cache = True
+gen_pipeline_eval_meta.size_batch = 100
+gen_pipeline_eval_meta.size_buffer_cpu = 5
+gen_pipeline_eval_meta.num_parallel_calls = %parallel_calls
+
+# Input pipeline for test baseline
+gen_pipeline_test_meta.ds_name = %ds_name_test
+gen_pipeline_test_meta.tfds_path = %tfds_path
+gen_pipeline_test_meta.dataset_cache = True
+gen_pipeline_test_meta.size_batch = 32
+gen_pipeline_test_meta.size_buffer_cpu = 5
+gen_pipeline_test_meta.num_parallel_calls = %parallel_calls
+
+
+# Define model
+gen_model.Architecture = @BYOLResnetCifar10v2
+gen_model.num_layers = 26
+gen_model.num_initial_filters = 32
+gen_model.shortcut_connection = True
+gen_model.weight_decay = 1.5e-6
+gen_model.batch_norm_momentum = 0.9
+gen_model.batch_norm_epsilon = 1e-3
+gen_model.batch_norm_center = True
+gen_model.batch_norm_scale = True
+gen_model.group_norm_groups = 16
+gen_model.use_mlp_norm = False
+gen_model.proj_hidden_size = 256
+gen_model.proj_size =128
+
+
+MT3Trainer.meta_epochs =  200
+MT3Trainer.meta_lr = 0.01
+MT3Trainer.num_inner_steps = 1
+MT3Trainer.inner_lr = 0.1
+MT3Trainer.save_period = 5
+MT3Trainer.use_lr_drop = False
+MT3Trainer.lr_drop_boundaries = [1,120,150]
+MT3Trainer.lr_factors = [0.1,1.0,0.1,0.01]
+MT3Trainer.use_inner_clipping = True
+MT3Trainer.use_outer_clipping = True
+MT3Trainer.clipping_norm = 10.0
+MT3Trainer.beta_byol = 0.1
+MT3Trainer.debug = False
+
+

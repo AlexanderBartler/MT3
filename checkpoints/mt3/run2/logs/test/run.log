@@ -1,0 +1,321 @@
+Setup input pipeline...
+Load dataset info from /data/public/tensorflow_datasets/cifar10/3.0.2
+Field info.splits from disk and from code do not match. Keeping the one from code.
+Field info.module_name from disk and from code do not match. Keeping the one from code.
+Reusing dataset cifar10 (/data/public/tensorflow_datasets/cifar10/3.0.2)
+Constructing tf.data.Dataset for split test, from /data/public/tensorflow_datasets/cifar10/3.0.2
+Setup model...
+Start testing...
+Restored from /no_backups/m134/gitrepos/experiments/models_final/2021-02-14-19-42-01-386/ckpts/ckpt-199.
+Gradients do not exist for variables ['architecture_1/Head_Dense/kernel:0', 'architecture_1/Head_Dense/bias:0'] when minimizing the loss.
+Gradients do not exist for variables ['architecture_1/Head_Dense/kernel:0', 'architecture_1/Head_Dense/bias:0'] when minimizing the loss.
+Gradients do not exist for variables ['architecture_1/Head_Dense/kernel:0', 'architecture_1/Head_Dense/bias:0'] when minimizing the loss.
+Gradients do not exist for variables ['architecture_1/Head_Dense/kernel:0', 'architecture_1/Head_Dense/bias:0'] when minimizing the loss.
+Result: metrics_test: [{'accuracy': 0.8821, 'precision': 0.8866613, 'recall': 0.8801}, {'accuracy': 0.8883, 'precision': 0.89431715, 'recall': 0.886}].
+Setup input pipeline...
+Load dataset info from /data/public/tensorflow_datasets/cifar10_corrupted/brightness_5/1.0.0
+Field info.config_name from disk and from code do not match. Keeping the one from code.
+Field info.config_description from disk and from code do not match. Keeping the one from code.
+Field info.splits from disk and from code do not match. Keeping the one from code.
+Field info.module_name from disk and from code do not match. Keeping the one from code.
+Reusing dataset cifar10_corrupted (/data/public/tensorflow_datasets/cifar10_corrupted/brightness_5/1.0.0)
+Constructing tf.data.Dataset for split test, from /data/public/tensorflow_datasets/cifar10_corrupted/brightness_5/1.0.0
+Setup model...
+Start testing...
+Restored from /no_backups/m134/gitrepos/experiments/models_final/2021-02-14-19-42-01-386/ckpts/ckpt-199.
+Gradients do not exist for variables ['architecture_3/Head_Dense/kernel:0', 'architecture_3/Head_Dense/bias:0'] when minimizing the loss.
+Gradients do not exist for variables ['architecture_3/Head_Dense/kernel:0', 'architecture_3/Head_Dense/bias:0'] when minimizing the loss.
+Gradients do not exist for variables ['architecture_3/Head_Dense/kernel:0', 'architecture_3/Head_Dense/bias:0'] when minimizing the loss.
+Gradients do not exist for variables ['architecture_3/Head_Dense/kernel:0', 'architecture_3/Head_Dense/bias:0'] when minimizing the loss.
+Result: metrics_test: [{'accuracy': 0.8579, 'precision': 0.862664, 'recall': 0.8549}, {'accuracy': 0.8685, 'precision': 0.8751266, 'recall': 0.8641}].
+Setup input pipeline...
+Load dataset info from /data/public/tensorflow_datasets/cifar10_corrupted/contrast_5/1.0.0
+Field info.config_name from disk and from code do not match. Keeping the one from code.
+Field info.config_description from disk and from code do not match. Keeping the one from code.
+Field info.splits from disk and from code do not match. Keeping the one from code.
+Field info.module_name from disk and from code do not match. Keeping the one from code.
+Reusing dataset cifar10_corrupted (/data/public/tensorflow_datasets/cifar10_corrupted/contrast_5/1.0.0)
+Constructing tf.data.Dataset for split test, from /data/public/tensorflow_datasets/cifar10_corrupted/contrast_5/1.0.0
+Setup model...
+Start testing...
+Restored from /no_backups/m134/gitrepos/experiments/models_final/2021-02-14-19-42-01-386/ckpts/ckpt-199.
+Gradients do not exist for variables ['architecture_5/Head_Dense/kernel:0', 'architecture_5/Head_Dense/bias:0'] when minimizing the loss.
+Gradients do not exist for variables ['architecture_5/Head_Dense/kernel:0', 'architecture_5/Head_Dense/bias:0'] when minimizing the loss.
+Gradients do not exist for variables ['architecture_5/Head_Dense/kernel:0', 'architecture_5/Head_Dense/bias:0'] when minimizing the loss.
+Gradients do not exist for variables ['architecture_5/Head_Dense/kernel:0', 'architecture_5/Head_Dense/bias:0'] when minimizing the loss.
+Result: metrics_test: [{'accuracy': 0.7295, 'precision': 0.73690623, 'recall': 0.726}, {'accuracy': 0.7856, 'precision': 0.7932887, 'recall': 0.7825}].
+Setup input pipeline...
+Load dataset info from /data/public/tensorflow_datasets/cifar10_corrupted/defocus_blur_5/1.0.0
+Field info.config_name from disk and from code do not match. Keeping the one from code.
+Field info.config_description from disk and from code do not match. Keeping the one from code.
+Field info.splits from disk and from code do not match. Keeping the one from code.
+Field info.module_name from disk and from code do not match. Keeping the one from code.
+Reusing dataset cifar10_corrupted (/data/public/tensorflow_datasets/cifar10_corrupted/defocus_blur_5/1.0.0)
+Constructing tf.data.Dataset for split test, from /data/public/tensorflow_datasets/cifar10_corrupted/defocus_blur_5/1.0.0
+Setup model...
+Start testing...
+Restored from /no_backups/m134/gitrepos/experiments/models_final/2021-02-14-19-42-01-386/ckpts/ckpt-199.
+Gradients do not exist for variables ['architecture_7/Head_Dense/kernel:0', 'architecture_7/Head_Dense/bias:0'] when minimizing the loss.
+Gradients do not exist for variables ['architecture_7/Head_Dense/kernel:0', 'architecture_7/Head_Dense/bias:0'] when minimizing the loss.
+Gradients do not exist for variables ['architecture_7/Head_Dense/kernel:0', 'architecture_7/Head_Dense/bias:0'] when minimizing the loss.
+Gradients do not exist for variables ['architecture_7/Head_Dense/kernel:0', 'architecture_7/Head_Dense/bias:0'] when minimizing the loss.
+Result: metrics_test: [{'accuracy': 0.8373, 'precision': 0.8446494, 'recall': 0.8335}, {'accuracy': 0.8499, 'precision': 0.8586526, 'recall': 0.845}].
+Setup input pipeline...
+Load dataset info from /data/public/tensorflow_datasets/cifar10_corrupted/elastic_5/1.0.0
+Field info.config_name from disk and from code do not match. Keeping the one from code.
+Field info.config_description from disk and from code do not match. Keeping the one from code.
+Field info.splits from disk and from code do not match. Keeping the one from code.
+Field info.module_name from disk and from code do not match. Keeping the one from code.
+Reusing dataset cifar10_corrupted (/data/public/tensorflow_datasets/cifar10_corrupted/elastic_5/1.0.0)
+Constructing tf.data.Dataset for split test, from /data/public/tensorflow_datasets/cifar10_corrupted/elastic_5/1.0.0
+Setup model...
+Start testing...
+Restored from /no_backups/m134/gitrepos/experiments/models_final/2021-02-14-19-42-01-386/ckpts/ckpt-199.
+Gradients do not exist for variables ['architecture_9/Head_Dense/kernel:0', 'architecture_9/Head_Dense/bias:0'] when minimizing the loss.
+Gradients do not exist for variables ['architecture_9/Head_Dense/kernel:0', 'architecture_9/Head_Dense/bias:0'] when minimizing the loss.
+Gradients do not exist for variables ['architecture_9/Head_Dense/kernel:0', 'architecture_9/Head_Dense/bias:0'] when minimizing the loss.
+Gradients do not exist for variables ['architecture_9/Head_Dense/kernel:0', 'architecture_9/Head_Dense/bias:0'] when minimizing the loss.
+Result: metrics_test: [{'accuracy': 0.7572, 'precision': 0.76543087, 'recall': 0.7515}, {'accuracy': 0.7671, 'precision': 0.7790197, 'recall': 0.7597}].
+Setup input pipeline...
+Load dataset info from /data/public/tensorflow_datasets/cifar10_corrupted/fog_5/1.0.0
+Field info.config_name from disk and from code do not match. Keeping the one from code.
+Field info.config_description from disk and from code do not match. Keeping the one from code.
+Field info.splits from disk and from code do not match. Keeping the one from code.
+Field info.module_name from disk and from code do not match. Keeping the one from code.
+Reusing dataset cifar10_corrupted (/data/public/tensorflow_datasets/cifar10_corrupted/fog_5/1.0.0)
+Constructing tf.data.Dataset for split test, from /data/public/tensorflow_datasets/cifar10_corrupted/fog_5/1.0.0
+Setup model...
+Start testing...
+Restored from /no_backups/m134/gitrepos/experiments/models_final/2021-02-14-19-42-01-386/ckpts/ckpt-199.
+Gradients do not exist for variables ['architecture_11/Head_Dense/kernel:0', 'architecture_11/Head_Dense/bias:0'] when minimizing the loss.
+Gradients do not exist for variables ['architecture_11/Head_Dense/kernel:0', 'architecture_11/Head_Dense/bias:0'] when minimizing the loss.
+Gradients do not exist for variables ['architecture_11/Head_Dense/kernel:0', 'architecture_11/Head_Dense/bias:0'] when minimizing the loss.
+Gradients do not exist for variables ['architecture_11/Head_Dense/kernel:0', 'architecture_11/Head_Dense/bias:0'] when minimizing the loss.
+Result: metrics_test: [{'accuracy': 0.7078, 'precision': 0.7155945, 'recall': 0.703}, {'accuracy': 0.7686, 'precision': 0.78088796, 'recall': 0.7616}].
+Setup input pipeline...
+Load dataset info from /data/public/tensorflow_datasets/cifar10_corrupted/frost_5/1.0.0
+Field info.config_name from disk and from code do not match. Keeping the one from code.
+Field info.config_description from disk and from code do not match. Keeping the one from code.
+Field info.splits from disk and from code do not match. Keeping the one from code.
+Field info.module_name from disk and from code do not match. Keeping the one from code.
+Reusing dataset cifar10_corrupted (/data/public/tensorflow_datasets/cifar10_corrupted/frost_5/1.0.0)
+Constructing tf.data.Dataset for split test, from /data/public/tensorflow_datasets/cifar10_corrupted/frost_5/1.0.0
+Setup model...
+Start testing...
+Restored from /no_backups/m134/gitrepos/experiments/models_final/2021-02-14-19-42-01-386/ckpts/ckpt-199.
+Gradients do not exist for variables ['architecture_13/Head_Dense/kernel:0', 'architecture_13/Head_Dense/bias:0'] when minimizing the loss.
+Gradients do not exist for variables ['architecture_13/Head_Dense/kernel:0', 'architecture_13/Head_Dense/bias:0'] when minimizing the loss.
+Gradients do not exist for variables ['architecture_13/Head_Dense/kernel:0', 'architecture_13/Head_Dense/bias:0'] when minimizing the loss.
+Gradients do not exist for variables ['architecture_13/Head_Dense/kernel:0', 'architecture_13/Head_Dense/bias:0'] when minimizing the loss.
+Result: metrics_test: [{'accuracy': 0.7526, 'precision': 0.76052046, 'recall': 0.7482}, {'accuracy': 0.8099, 'precision': 0.8180248, 'recall': 0.8051}].
+Setup input pipeline...
+Load dataset info from /data/public/tensorflow_datasets/cifar10_corrupted/frosted_glass_blur_5/1.0.0
+Field info.config_name from disk and from code do not match. Keeping the one from code.
+Field info.config_description from disk and from code do not match. Keeping the one from code.
+Field info.splits from disk and from code do not match. Keeping the one from code.
+Field info.module_name from disk and from code do not match. Keeping the one from code.
+Reusing dataset cifar10_corrupted (/data/public/tensorflow_datasets/cifar10_corrupted/frosted_glass_blur_5/1.0.0)
+Constructing tf.data.Dataset for split test, from /data/public/tensorflow_datasets/cifar10_corrupted/frosted_glass_blur_5/1.0.0
+Setup model...
+Start testing...
+Restored from /no_backups/m134/gitrepos/experiments/models_final/2021-02-14-19-42-01-386/ckpts/ckpt-199.
+Gradients do not exist for variables ['architecture_15/Head_Dense/kernel:0', 'architecture_15/Head_Dense/bias:0'] when minimizing the loss.
+Gradients do not exist for variables ['architecture_15/Head_Dense/kernel:0', 'architecture_15/Head_Dense/bias:0'] when minimizing the loss.
+Gradients do not exist for variables ['architecture_15/Head_Dense/kernel:0', 'architecture_15/Head_Dense/bias:0'] when minimizing the loss.
+Gradients do not exist for variables ['architecture_15/Head_Dense/kernel:0', 'architecture_15/Head_Dense/bias:0'] when minimizing the loss.
+Result: metrics_test: [{'accuracy': 0.6145, 'precision': 0.6264178, 'recall': 0.6075}, {'accuracy': 0.666, 'precision': 0.6825397, 'recall': 0.6579}].
+Setup input pipeline...
+Load dataset info from /data/public/tensorflow_datasets/cifar10_corrupted/gaussian_blur_5/1.0.0
+Field info.config_name from disk and from code do not match. Keeping the one from code.
+Field info.config_description from disk and from code do not match. Keeping the one from code.
+Field info.splits from disk and from code do not match. Keeping the one from code.
+Field info.module_name from disk and from code do not match. Keeping the one from code.
+Reusing dataset cifar10_corrupted (/data/public/tensorflow_datasets/cifar10_corrupted/gaussian_blur_5/1.0.0)
+Constructing tf.data.Dataset for split test, from /data/public/tensorflow_datasets/cifar10_corrupted/gaussian_blur_5/1.0.0
+Setup model...
+Start testing...
+Restored from /no_backups/m134/gitrepos/experiments/models_final/2021-02-14-19-42-01-386/ckpts/ckpt-199.
+Gradients do not exist for variables ['architecture_17/Head_Dense/kernel:0', 'architecture_17/Head_Dense/bias:0'] when minimizing the loss.
+Gradients do not exist for variables ['architecture_17/Head_Dense/kernel:0', 'architecture_17/Head_Dense/bias:0'] when minimizing the loss.
+Gradients do not exist for variables ['architecture_17/Head_Dense/kernel:0', 'architecture_17/Head_Dense/bias:0'] when minimizing the loss.
+Gradients do not exist for variables ['architecture_17/Head_Dense/kernel:0', 'architecture_17/Head_Dense/bias:0'] when minimizing the loss.
+Result: metrics_test: [{'accuracy': 0.8389, 'precision': 0.8441729, 'recall': 0.8359}, {'accuracy': 0.8502, 'precision': 0.8585633, 'recall': 0.8462}].
+Setup input pipeline...
+Load dataset info from /data/public/tensorflow_datasets/cifar10_corrupted/impulse_noise_5/1.0.0
+Field info.config_name from disk and from code do not match. Keeping the one from code.
+Field info.config_description from disk and from code do not match. Keeping the one from code.
+Field info.splits from disk and from code do not match. Keeping the one from code.
+Field info.module_name from disk and from code do not match. Keeping the one from code.
+Reusing dataset cifar10_corrupted (/data/public/tensorflow_datasets/cifar10_corrupted/impulse_noise_5/1.0.0)
+Constructing tf.data.Dataset for split test, from /data/public/tensorflow_datasets/cifar10_corrupted/impulse_noise_5/1.0.0
+Setup model...
+Start testing...
+Restored from /no_backups/m134/gitrepos/experiments/models_final/2021-02-14-19-42-01-386/ckpts/ckpt-199.
+Gradients do not exist for variables ['architecture_19/Head_Dense/kernel:0', 'architecture_19/Head_Dense/bias:0'] when minimizing the loss.
+Gradients do not exist for variables ['architecture_19/Head_Dense/kernel:0', 'architecture_19/Head_Dense/bias:0'] when minimizing the loss.
+Gradients do not exist for variables ['architecture_19/Head_Dense/kernel:0', 'architecture_19/Head_Dense/bias:0'] when minimizing the loss.
+Gradients do not exist for variables ['architecture_19/Head_Dense/kernel:0', 'architecture_19/Head_Dense/bias:0'] when minimizing the loss.
+Result: metrics_test: [{'accuracy': 0.4845, 'precision': 0.4939334, 'recall': 0.4763}, {'accuracy': 0.5684, 'precision': 0.57890385, 'recall': 0.5598}].
+Setup input pipeline...
+Load dataset info from /data/public/tensorflow_datasets/cifar10_corrupted/jpeg_compression_5/1.0.0
+Field info.config_name from disk and from code do not match. Keeping the one from code.
+Field info.config_description from disk and from code do not match. Keeping the one from code.
+Field info.splits from disk and from code do not match. Keeping the one from code.
+Field info.module_name from disk and from code do not match. Keeping the one from code.
+Reusing dataset cifar10_corrupted (/data/public/tensorflow_datasets/cifar10_corrupted/jpeg_compression_5/1.0.0)
+Constructing tf.data.Dataset for split test, from /data/public/tensorflow_datasets/cifar10_corrupted/jpeg_compression_5/1.0.0
+Setup model...
+Start testing...
+Restored from /no_backups/m134/gitrepos/experiments/models_final/2021-02-14-19-42-01-386/ckpts/ckpt-199.
+Gradients do not exist for variables ['architecture_21/Head_Dense/kernel:0', 'architecture_21/Head_Dense/bias:0'] when minimizing the loss.
+Gradients do not exist for variables ['architecture_21/Head_Dense/kernel:0', 'architecture_21/Head_Dense/bias:0'] when minimizing the loss.
+Gradients do not exist for variables ['architecture_21/Head_Dense/kernel:0', 'architecture_21/Head_Dense/bias:0'] when minimizing the loss.
+Gradients do not exist for variables ['architecture_21/Head_Dense/kernel:0', 'architecture_21/Head_Dense/bias:0'] when minimizing the loss.
+Result: metrics_test: [{'accuracy': 0.7522, 'precision': 0.76114684, 'recall': 0.746}, {'accuracy': 0.7756, 'precision': 0.78695565, 'recall': 0.7698}].
+Setup input pipeline...
+Load dataset info from /data/public/tensorflow_datasets/cifar10_corrupted/motion_blur_5/1.0.0
+Field info.config_name from disk and from code do not match. Keeping the one from code.
+Field info.config_description from disk and from code do not match. Keeping the one from code.
+Field info.splits from disk and from code do not match. Keeping the one from code.
+Field info.module_name from disk and from code do not match. Keeping the one from code.
+Reusing dataset cifar10_corrupted (/data/public/tensorflow_datasets/cifar10_corrupted/motion_blur_5/1.0.0)
+Constructing tf.data.Dataset for split test, from /data/public/tensorflow_datasets/cifar10_corrupted/motion_blur_5/1.0.0
+Setup model...
+Start testing...
+Restored from /no_backups/m134/gitrepos/experiments/models_final/2021-02-14-19-42-01-386/ckpts/ckpt-199.
+Gradients do not exist for variables ['architecture_23/Head_Dense/kernel:0', 'architecture_23/Head_Dense/bias:0'] when minimizing the loss.
+Gradients do not exist for variables ['architecture_23/Head_Dense/kernel:0', 'architecture_23/Head_Dense/bias:0'] when minimizing the loss.
+Gradients do not exist for variables ['architecture_23/Head_Dense/kernel:0', 'architecture_23/Head_Dense/bias:0'] when minimizing the loss.
+Gradients do not exist for variables ['architecture_23/Head_Dense/kernel:0', 'architecture_23/Head_Dense/bias:0'] when minimizing the loss.
+Result: metrics_test: [{'accuracy': 0.7362, 'precision': 0.7438143, 'recall': 0.7305}, {'accuracy': 0.7783, 'precision': 0.78924817, 'recall': 0.7737}].
+Setup input pipeline...
+Load dataset info from /data/public/tensorflow_datasets/cifar10_corrupted/pixelate_5/1.0.0
+Field info.config_name from disk and from code do not match. Keeping the one from code.
+Field info.config_description from disk and from code do not match. Keeping the one from code.
+Field info.splits from disk and from code do not match. Keeping the one from code.
+Field info.module_name from disk and from code do not match. Keeping the one from code.
+Reusing dataset cifar10_corrupted (/data/public/tensorflow_datasets/cifar10_corrupted/pixelate_5/1.0.0)
+Constructing tf.data.Dataset for split test, from /data/public/tensorflow_datasets/cifar10_corrupted/pixelate_5/1.0.0
+Setup model...
+Start testing...
+Restored from /no_backups/m134/gitrepos/experiments/models_final/2021-02-14-19-42-01-386/ckpts/ckpt-199.
+Gradients do not exist for variables ['architecture_25/Head_Dense/kernel:0', 'architecture_25/Head_Dense/bias:0'] when minimizing the loss.
+Gradients do not exist for variables ['architecture_25/Head_Dense/kernel:0', 'architecture_25/Head_Dense/bias:0'] when minimizing the loss.
+Gradients do not exist for variables ['architecture_25/Head_Dense/kernel:0', 'architecture_25/Head_Dense/bias:0'] when minimizing the loss.
+Gradients do not exist for variables ['architecture_25/Head_Dense/kernel:0', 'architecture_25/Head_Dense/bias:0'] when minimizing the loss.
+Result: metrics_test: [{'accuracy': 0.7429, 'precision': 0.75198615, 'recall': 0.7383}, {'accuracy': 0.7514, 'precision': 0.7671275, 'recall': 0.7435}].
+Setup input pipeline...
+Load dataset info from /data/public/tensorflow_datasets/cifar10_corrupted/saturate_5/1.0.0
+Field info.config_name from disk and from code do not match. Keeping the one from code.
+Field info.config_description from disk and from code do not match. Keeping the one from code.
+Field info.splits from disk and from code do not match. Keeping the one from code.
+Field info.module_name from disk and from code do not match. Keeping the one from code.
+Reusing dataset cifar10_corrupted (/data/public/tensorflow_datasets/cifar10_corrupted/saturate_5/1.0.0)
+Constructing tf.data.Dataset for split test, from /data/public/tensorflow_datasets/cifar10_corrupted/saturate_5/1.0.0
+Setup model...
+Start testing...
+Restored from /no_backups/m134/gitrepos/experiments/models_final/2021-02-14-19-42-01-386/ckpts/ckpt-199.
+Gradients do not exist for variables ['architecture_27/Head_Dense/kernel:0', 'architecture_27/Head_Dense/bias:0'] when minimizing the loss.
+Gradients do not exist for variables ['architecture_27/Head_Dense/kernel:0', 'architecture_27/Head_Dense/bias:0'] when minimizing the loss.
+Gradients do not exist for variables ['architecture_27/Head_Dense/kernel:0', 'architecture_27/Head_Dense/bias:0'] when minimizing the loss.
+Gradients do not exist for variables ['architecture_27/Head_Dense/kernel:0', 'architecture_27/Head_Dense/bias:0'] when minimizing the loss.
+Result: metrics_test: [{'accuracy': 0.8192, 'precision': 0.8249141, 'recall': 0.8165}, {'accuracy': 0.8496, 'precision': 0.8569404, 'recall': 0.8464}].
+Setup input pipeline...
+Load dataset info from /data/public/tensorflow_datasets/cifar10_corrupted/shot_noise_5/1.0.0
+Field info.config_name from disk and from code do not match. Keeping the one from code.
+Field info.config_description from disk and from code do not match. Keeping the one from code.
+Field info.splits from disk and from code do not match. Keeping the one from code.
+Field info.module_name from disk and from code do not match. Keeping the one from code.
+Reusing dataset cifar10_corrupted (/data/public/tensorflow_datasets/cifar10_corrupted/shot_noise_5/1.0.0)
+Constructing tf.data.Dataset for split test, from /data/public/tensorflow_datasets/cifar10_corrupted/shot_noise_5/1.0.0
+Setup model...
+Start testing...
+Restored from /no_backups/m134/gitrepos/experiments/models_final/2021-02-14-19-42-01-386/ckpts/ckpt-199.
+Gradients do not exist for variables ['architecture_29/Head_Dense/kernel:0', 'architecture_29/Head_Dense/bias:0'] when minimizing the loss.
+Gradients do not exist for variables ['architecture_29/Head_Dense/kernel:0', 'architecture_29/Head_Dense/bias:0'] when minimizing the loss.
+Gradients do not exist for variables ['architecture_29/Head_Dense/kernel:0', 'architecture_29/Head_Dense/bias:0'] when minimizing the loss.
+Gradients do not exist for variables ['architecture_29/Head_Dense/kernel:0', 'architecture_29/Head_Dense/bias:0'] when minimizing the loss.
+Result: metrics_test: [{'accuracy': 0.6269, 'precision': 0.63709015, 'recall': 0.6218}, {'accuracy': 0.6996, 'precision': 0.7087895, 'recall': 0.6927}].
+Setup input pipeline...
+Load dataset info from /data/public/tensorflow_datasets/cifar10_corrupted/snow_5/1.0.0
+Field info.config_name from disk and from code do not match. Keeping the one from code.
+Field info.config_description from disk and from code do not match. Keeping the one from code.
+Field info.splits from disk and from code do not match. Keeping the one from code.
+Field info.module_name from disk and from code do not match. Keeping the one from code.
+Reusing dataset cifar10_corrupted (/data/public/tensorflow_datasets/cifar10_corrupted/snow_5/1.0.0)
+Constructing tf.data.Dataset for split test, from /data/public/tensorflow_datasets/cifar10_corrupted/snow_5/1.0.0
+Setup model...
+Start testing...
+Restored from /no_backups/m134/gitrepos/experiments/models_final/2021-02-14-19-42-01-386/ckpts/ckpt-199.
+Gradients do not exist for variables ['architecture_31/Head_Dense/kernel:0', 'architecture_31/Head_Dense/bias:0'] when minimizing the loss.
+Gradients do not exist for variables ['architecture_31/Head_Dense/kernel:0', 'architecture_31/Head_Dense/bias:0'] when minimizing the loss.
+Gradients do not exist for variables ['architecture_31/Head_Dense/kernel:0', 'architecture_31/Head_Dense/bias:0'] when minimizing the loss.
+Gradients do not exist for variables ['architecture_31/Head_Dense/kernel:0', 'architecture_31/Head_Dense/bias:0'] when minimizing the loss.
+Result: metrics_test: [{'accuracy': 0.7733, 'precision': 0.7808664, 'recall': 0.7697}, {'accuracy': 0.8041, 'precision': 0.8143206, 'recall': 0.7995}].
+Setup input pipeline...
+Load dataset info from /data/public/tensorflow_datasets/cifar10_corrupted/spatter_5/1.0.0
+Field info.config_name from disk and from code do not match. Keeping the one from code.
+Field info.config_description from disk and from code do not match. Keeping the one from code.
+Field info.splits from disk and from code do not match. Keeping the one from code.
+Field info.module_name from disk and from code do not match. Keeping the one from code.
+Reusing dataset cifar10_corrupted (/data/public/tensorflow_datasets/cifar10_corrupted/spatter_5/1.0.0)
+Constructing tf.data.Dataset for split test, from /data/public/tensorflow_datasets/cifar10_corrupted/spatter_5/1.0.0
+Setup model...
+Start testing...
+Restored from /no_backups/m134/gitrepos/experiments/models_final/2021-02-14-19-42-01-386/ckpts/ckpt-199.
+Gradients do not exist for variables ['architecture_33/Head_Dense/kernel:0', 'architecture_33/Head_Dense/bias:0'] when minimizing the loss.
+Gradients do not exist for variables ['architecture_33/Head_Dense/kernel:0', 'architecture_33/Head_Dense/bias:0'] when minimizing the loss.
+Gradients do not exist for variables ['architecture_33/Head_Dense/kernel:0', 'architecture_33/Head_Dense/bias:0'] when minimizing the loss.
+Gradients do not exist for variables ['architecture_33/Head_Dense/kernel:0', 'architecture_33/Head_Dense/bias:0'] when minimizing the loss.
+Result: metrics_test: [{'accuracy': 0.7774, 'precision': 0.7875854, 'recall': 0.7727}, {'accuracy': 0.7976, 'precision': 0.8069675, 'recall': 0.7922}].
+Setup input pipeline...
+Load dataset info from /data/public/tensorflow_datasets/cifar10_corrupted/speckle_noise_5/1.0.0
+Field info.config_name from disk and from code do not match. Keeping the one from code.
+Field info.config_description from disk and from code do not match. Keeping the one from code.
+Field info.splits from disk and from code do not match. Keeping the one from code.
+Field info.module_name from disk and from code do not match. Keeping the one from code.
+Reusing dataset cifar10_corrupted (/data/public/tensorflow_datasets/cifar10_corrupted/speckle_noise_5/1.0.0)
+Constructing tf.data.Dataset for split test, from /data/public/tensorflow_datasets/cifar10_corrupted/speckle_noise_5/1.0.0
+Setup model...
+Start testing...
+Restored from /no_backups/m134/gitrepos/experiments/models_final/2021-02-14-19-42-01-386/ckpts/ckpt-199.
+Gradients do not exist for variables ['architecture_35/Head_Dense/kernel:0', 'architecture_35/Head_Dense/bias:0'] when minimizing the loss.
+Gradients do not exist for variables ['architecture_35/Head_Dense/kernel:0', 'architecture_35/Head_Dense/bias:0'] when minimizing the loss.
+Gradients do not exist for variables ['architecture_35/Head_Dense/kernel:0', 'architecture_35/Head_Dense/bias:0'] when minimizing the loss.
+Gradients do not exist for variables ['architecture_35/Head_Dense/kernel:0', 'architecture_35/Head_Dense/bias:0'] when minimizing the loss.
+Result: metrics_test: [{'accuracy': 0.6051, 'precision': 0.61513966, 'recall': 0.5989}, {'accuracy': 0.6727, 'precision': 0.6823903, 'recall': 0.6669}].
+Setup input pipeline...
+Load dataset info from /data/public/tensorflow_datasets/cifar10_corrupted/zoom_blur_5/1.0.0
+Field info.config_name from disk and from code do not match. Keeping the one from code.
+Field info.config_description from disk and from code do not match. Keeping the one from code.
+Field info.splits from disk and from code do not match. Keeping the one from code.
+Field info.module_name from disk and from code do not match. Keeping the one from code.
+Reusing dataset cifar10_corrupted (/data/public/tensorflow_datasets/cifar10_corrupted/zoom_blur_5/1.0.0)
+Constructing tf.data.Dataset for split test, from /data/public/tensorflow_datasets/cifar10_corrupted/zoom_blur_5/1.0.0
+Setup model...
+Start testing...
+Restored from /no_backups/m134/gitrepos/experiments/models_final/2021-02-14-19-42-01-386/ckpts/ckpt-199.
+Gradients do not exist for variables ['architecture_37/Head_Dense/kernel:0', 'architecture_37/Head_Dense/bias:0'] when minimizing the loss.
+Gradients do not exist for variables ['architecture_37/Head_Dense/kernel:0', 'architecture_37/Head_Dense/bias:0'] when minimizing the loss.
+Gradients do not exist for variables ['architecture_37/Head_Dense/kernel:0', 'architecture_37/Head_Dense/bias:0'] when minimizing the loss.
+Gradients do not exist for variables ['architecture_37/Head_Dense/kernel:0', 'architecture_37/Head_Dense/bias:0'] when minimizing the loss.
+Result: metrics_test: [{'accuracy': 0.8064, 'precision': 0.81383085, 'recall': 0.8026}, {'accuracy': 0.8198, 'precision': 0.8281996, 'recall': 0.8147}].
+                                 cifar10: [{'accuracy': '0.8821', 'precision': '0.8866613', 'recall': '0.8801'}, {'accuracy': '0.8883', 'precision': '0.89431715', 'recall': '0.886'}]
+          cifar10_corrupted/brightness_5: [{'accuracy': '0.8579', 'precision': '0.862664', 'recall': '0.8549'}, {'accuracy': '0.8685', 'precision': '0.8751266', 'recall': '0.8641'}]
+            cifar10_corrupted/contrast_5: [{'accuracy': '0.7295', 'precision': '0.73690623', 'recall': '0.726'}, {'accuracy': '0.7856', 'precision': '0.7932887', 'recall': '0.7825'}]
+        cifar10_corrupted/defocus_blur_5: [{'accuracy': '0.8373', 'precision': '0.8446494', 'recall': '0.8335'}, {'accuracy': '0.8499', 'precision': '0.8586526', 'recall': '0.845'}]
+             cifar10_corrupted/elastic_5: [{'accuracy': '0.7572', 'precision': '0.76543087', 'recall': '0.7515'}, {'accuracy': '0.7671', 'precision': '0.7790197', 'recall': '0.7597'}]
+                 cifar10_corrupted/fog_5: [{'accuracy': '0.7078', 'precision': '0.7155945', 'recall': '0.703'}, {'accuracy': '0.7686', 'precision': '0.78088796', 'recall': '0.7616'}]
+               cifar10_corrupted/frost_5: [{'accuracy': '0.7526', 'precision': '0.76052046', 'recall': '0.7482'}, {'accuracy': '0.8099', 'precision': '0.8180248', 'recall': '0.8051'}]
+  cifar10_corrupted/frosted_glass_blur_5: [{'accuracy': '0.6145', 'precision': '0.6264178', 'recall': '0.6075'}, {'accuracy': '0.666', 'precision': '0.6825397', 'recall': '0.6579'}]
+       cifar10_corrupted/gaussian_blur_5: [{'accuracy': '0.8389', 'precision': '0.8441729', 'recall': '0.8359'}, {'accuracy': '0.8502', 'precision': '0.8585633', 'recall': '0.8462'}]
+       cifar10_corrupted/impulse_noise_5: [{'accuracy': '0.4845', 'precision': '0.4939334', 'recall': '0.4763'}, {'accuracy': '0.5684', 'precision': '0.57890385', 'recall': '0.5598'}]
+    cifar10_corrupted/jpeg_compression_5: [{'accuracy': '0.7522', 'precision': '0.76114684', 'recall': '0.746'}, {'accuracy': '0.7756', 'precision': '0.78695565', 'recall': '0.7698'}]
+         cifar10_corrupted/motion_blur_5: [{'accuracy': '0.7362', 'precision': '0.7438143', 'recall': '0.7305'}, {'accuracy': '0.7783', 'precision': '0.78924817', 'recall': '0.7737'}]
+            cifar10_corrupted/pixelate_5: [{'accuracy': '0.7429', 'precision': '0.75198615', 'recall': '0.7383'}, {'accuracy': '0.7514', 'precision': '0.7671275', 'recall': '0.7435'}]
+            cifar10_corrupted/saturate_5: [{'accuracy': '0.8192', 'precision': '0.8249141', 'recall': '0.8165'}, {'accuracy': '0.8496', 'precision': '0.8569404', 'recall': '0.8464'}]
+          cifar10_corrupted/shot_noise_5: [{'accuracy': '0.6269', 'precision': '0.63709015', 'recall': '0.6218'}, {'accuracy': '0.6996', 'precision': '0.7087895', 'recall': '0.6927'}]
+                cifar10_corrupted/snow_5: [{'accuracy': '0.7733', 'precision': '0.7808664', 'recall': '0.7697'}, {'accuracy': '0.8041', 'precision': '0.8143206', 'recall': '0.7995'}]
+             cifar10_corrupted/spatter_5: [{'accuracy': '0.7774', 'precision': '0.7875854', 'recall': '0.7727'}, {'accuracy': '0.7976', 'precision': '0.8069675', 'recall': '0.7922'}]
+       cifar10_corrupted/speckle_noise_5: [{'accuracy': '0.6051', 'precision': '0.61513966', 'recall': '0.5989'}, {'accuracy': '0.6727', 'precision': '0.6823903', 'recall': '0.6669'}]
+           cifar10_corrupted/zoom_blur_5: [{'accuracy': '0.8064', 'precision': '0.81383085', 'recall': '0.8026'}, {'accuracy': '0.8198', 'precision': '0.8281996', 'recall': '0.8147'}]

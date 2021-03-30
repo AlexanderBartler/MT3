@@ -1,0 +1,76 @@
+# Macros:
+# ==============================================================================
+ds_name_train = 'cifar10'
+parallel_calls = -1
+tfds_path = '/data/public/tensorflow_datasets'
+
+# Parameters for batch_augmentation:
+# ==============================================================================
+batch_augmentation.blur_rate = 0.2
+batch_augmentation.flip_rl_rate = 0.5
+batch_augmentation.flip_ud_rate = 0.5
+
+# Parameters for BYOLResnetCifar10v2:
+# ==============================================================================
+# None.
+
+# Parameters for gen_model:
+# ==============================================================================
+gen_model.Architecture = @BYOLResnetCifar10v2
+gen_model.batch_norm_center = True
+gen_model.batch_norm_epsilon = 0.001
+gen_model.batch_norm_momentum = 0.9
+gen_model.batch_norm_scale = True
+gen_model.group_norm_groups = 16
+gen_model.num_initial_filters = 32
+gen_model.num_layers = 26
+gen_model.proj_hidden_size = 256
+gen_model.proj_size = 128
+gen_model.shortcut_connection = True
+gen_model.use_mlp_norm = False
+gen_model.weight_decay = 1.5e-06
+
+# Parameters for gen_pipeline_eval_meta:
+# ==============================================================================
+gen_pipeline_eval_meta.dataset_cache = True
+gen_pipeline_eval_meta.ds_name = %ds_name_train
+gen_pipeline_eval_meta.num_parallel_calls = %parallel_calls
+gen_pipeline_eval_meta.size_batch = 100
+gen_pipeline_eval_meta.size_buffer_cpu = 5
+gen_pipeline_eval_meta.tfds_path = %tfds_path
+
+# Parameters for gen_pipeline_train_meta:
+# ==============================================================================
+gen_pipeline_train_meta.augmentation_type = 'simclr'
+gen_pipeline_train_meta.b_shuffle = True
+gen_pipeline_train_meta.dataset_cache = True
+gen_pipeline_train_meta.ds_name = %ds_name_train
+gen_pipeline_train_meta.image_repetition = False
+gen_pipeline_train_meta.inner_batch_size = 8
+gen_pipeline_train_meta.num_parallel_calls = %parallel_calls
+gen_pipeline_train_meta.outer_batch_size = 4
+gen_pipeline_train_meta.shuffle_buffer_size = 50000
+gen_pipeline_train_meta.size_buffer_cpu = 2
+gen_pipeline_train_meta.tfds_path = %tfds_path
+gen_pipeline_train_meta.use_batch_aug = True
+
+# Parameters for gen_run_folder:
+# ==============================================================================
+gen_run_folder.target = 'models_final'
+
+# Parameters for M3TTrainer:
+# ==============================================================================
+M3TTrainer.beta_byol = 0.1
+M3TTrainer.clipping_norm = 10.0
+M3TTrainer.debug = False
+M3TTrainer.inner_lr = 0.1
+M3TTrainer.keep_ckp = None
+M3TTrainer.lr_drop_boundaries = [1, 120, 150]
+M3TTrainer.lr_factors = [0.1, 1.0, 0.1, 0.01]
+M3TTrainer.meta_epochs = 200
+M3TTrainer.meta_lr = 0.01
+M3TTrainer.num_inner_steps = 1
+M3TTrainer.save_period = 5
+M3TTrainer.use_inner_clipping = True
+M3TTrainer.use_lr_drop = False
+M3TTrainer.use_outer_clipping = True

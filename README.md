@@ -1,4 +1,5 @@
 # Meta Test-Time Training MT3
+Implementation of the paper https://arxiv.org/abs/2103.16201
 ## Environment
 Requirement Python3.x and Cuda 11.0 
 

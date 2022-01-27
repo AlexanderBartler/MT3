@@ -43,19 +43,19 @@ if __name__ == '__main__':
     LEVEL = 5
     test_datasets = [f'cifar10_corrupted/brightness_{LEVEL}',
                      f'cifar10_corrupted/contrast_{LEVEL}',
-                     f'cifar10_corrupted/defocus_blur_{LEVEL}']
-                     #f'cifar10_corrupted/elastic_{LEVEL}',
-                     #f'cifar10_corrupted/fog_{LEVEL}',
-                     #f'cifar10_corrupted/frost_{LEVEL}',
-                     #f'cifar10_corrupted/frosted_glass_blur_{LEVEL}',
-                     #f'cifar10_corrupted/gaussian_blur_{LEVEL}',
-                     #f'cifar10_corrupted/impulse_noise_{LEVEL}',
-                     #f'cifar10_corrupted/jpeg_compression_{LEVEL}',
-                     #f'cifar10_corrupted/motion_blur_{LEVEL}',
-                     #f'cifar10_corrupted/pixelate_{LEVEL}',
-                     #f'cifar10_corrupted/shot_noise_{LEVEL}',
-                     #f'cifar10_corrupted/snow_{LEVEL}',
-                     #f'cifar10_corrupted/zoom_blur_{LEVEL}']
+                     f'cifar10_corrupted/defocus_blur_{LEVEL}'
+                     f'cifar10_corrupted/elastic_{LEVEL}',
+                     f'cifar10_corrupted/fog_{LEVEL}',
+                     f'cifar10_corrupted/frost_{LEVEL}',
+                     f'cifar10_corrupted/frosted_glass_blur_{LEVEL}',
+                     f'cifar10_corrupted/gaussian_noise_{LEVEL}',
+                     f'cifar10_corrupted/impulse_noise_{LEVEL}',
+                     f'cifar10_corrupted/jpeg_compression_{LEVEL}',
+                     f'cifar10_corrupted/motion_blur_{LEVEL}',
+                     f'cifar10_corrupted/pixelate_{LEVEL}',
+                     f'cifar10_corrupted/shot_noise_{LEVEL}',
+                     f'cifar10_corrupted/snow_{LEVEL}',
+                     f'cifar10_corrupted/zoom_blur_{LEVEL}']
     # generate folder structures
     run_paths = utils_params.gen_run_folder(path_model_id=path_model_id)
 

@@ -70,8 +70,8 @@ def test_meta(target_model, online_model, test_ds, test_ds_info, run_paths, test
     for images_aug_1, images_aug_2, images, labels in test_ds:
         inner_loop(images_aug_1, images_aug_2, images, labels)
         k += 1
-        if k==3:
-            break
+        #if k==3:
+        #    break
 
     # fetch & reset metrics
     metrics_res_test = [metrics.result(metrics_, as_numpy=True) for metrics_ in metrics_test]

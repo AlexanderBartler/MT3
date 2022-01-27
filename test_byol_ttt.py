@@ -48,7 +48,7 @@ if __name__ == '__main__':
                      f'cifar10_corrupted/fog_{LEVEL}',
                      f'cifar10_corrupted/frost_{LEVEL}',
                      f'cifar10_corrupted/frosted_glass_blur_{LEVEL}',
-                     f'cifar10_corrupted/gaussian_blur_{LEVEL}',
+                     f'cifar10_corrupted/gaussian_noise_{LEVEL}',
                      f'cifar10_corrupted/impulse_noise_{LEVEL}',
                      f'cifar10_corrupted/jpeg_compression_{LEVEL}',
                      f'cifar10_corrupted/motion_blur_{LEVEL}',
